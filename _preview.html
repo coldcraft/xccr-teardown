@@ -1,0 +1,250 @@
+<!doctype html><meta charset=utf-8><style>
+body{background:#0d1117;color:#e6edf3;font:16px/1.6 -apple-system,Segoe UI,Helvetica,Arial,sans-serif;max-width:900px;margin:0 auto;padding:40px}
+h1,h2,h3{border-bottom:1px solid #21262d;padding-bottom:.3em;margin-top:30px}h1{font-size:2em}h2{font-size:1.5em}
+a{color:#4493f8;text-decoration:none}code{background:#161b22;padding:.2em .4em;border-radius:6px;font:13px ui-monospace,Consolas,monospace}
+pre{background:#161b22;padding:16px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;margin:16px 0;display:block;overflow:auto}th,td{border:1px solid #30363d;padding:6px 13px}th{background:#161b22}tr:nth-child(2n){background:#161b22}
+blockquote{border-left:4px solid #30363d;color:#8b949e;padding:0 1em;margin:0}img{max-width:100%}
+</style><h1>xccr.com — a teardown of a 22-year-old ARG</h1>
+<blockquote>
+<p><strong>TL;DR</strong> <a href="https://xccr.com">xccr.com</a> is a cryptic "enter the numbers before time runs
+out" console that has been online since <strong>November 2004</strong>. For two decades people have
+called it an unsolved Half-Life 2 ARG. It is neither unsolved nor Half-Life: it is one
+hobbyist's Lost-inspired puzzle, rebuilt three times and quietly abandoned. This repo is
+the first full teardown — mechanics, authorship, a reconstructed state model, a live
+experiment (we put money in to test a hypothesis), and all the raw data so you can check
+every claim yourself.</p>
+</blockquote>
+<p align="center">
+  <img src="evidence/infographic.png" alt="xccr.com findings infographic" width="900">
+</p>
+
+<hr />
+<h2>What it is, in one paragraph</h2>
+<p>A black terminal with a green <code>&gt;:</code> prompt. Type the number <strong>227664</strong> and press Enter; a
+server-side 100-minute countdown appears. Select the page text and a hidden line shows
+<code>0.00212282 / 0.00227664 = B1b</code>. The HTML <code>&lt;head&gt;</code> carries a Bitcoin address, a Dogecoin
+address, and four "key" alphabet rows. That is the entire modern site. Everything else —
+the Cyrillic title <code>ХССГ</code>, the Half-Life billboard rumor, the "ARE YOU HIM?" message — is
+either backstory or coincidence. The sections below separate the two.</p>
+<h2>What it is <em>not</em></h2>
+<ul>
+<li><strong>Not Half-Life 2.</strong> A City 17 billboard reads <code>ХССГ</code>, and that is the whole basis for the
+  rumor. HL2 shipped 16 Nov 2004; the domain was registered 18 Nov 2004; the site's GIFs are
+  dated 17 Nov 2004. The 2006 solvers already noticed the billboard and dismissed it. The
+  name likely came <em>from</em> the game; nothing points the other way.</li>
+<li><strong>Not The Lost Experience.</strong> The console, the 100-minute timer, and "Are you him?" are
+  lifted from <em>Lost</em> (Desmond in the hatch), but this was a fan homage, never an official ABC
+  property. The 2006 community established this and moved on.</li>
+<li><strong>Not unsolved.</strong> The 2006 puzzle chain <em>was</em> solved (see Era 1). The modern version isn't
+  "unsolved" so much as <strong>abandoned</strong> — its progress mechanism is a server job that stopped
+  running in September 2024.</li>
+</ul>
+<h2>Who is behind it</h2>
+<p>No name, but the cluster is unambiguous from public records:</p>
+<ul>
+<li><strong>2006 WHOIS</strong> (preserved in the Unfiction thread): registrant in <strong>Batu Pahat, Johor,
+  Malaysia</strong>, admin contact <code>xccr@palmy.net.nz</code>, nameservers <code>ns3/ns4.kiwihosting.net.nz</code>.</li>
+<li>The <strong>same server IP</strong> (103.7.11.66, Exabytes Singapore, Plesk) hosts <strong>palmy.nz</strong>
+  ("Palmerston North, New Zealand"), <strong>basong.my</strong> (a registered Johor company), and
+  <strong>xmoo.net</strong> — which from 2004–2021 was the <strong>"XMoo Network,"</strong> a hobby web network by the
+  same person (IMooU messaging, a "Batu Pahat Online Portal," Auckland/Wellington/Christchurch
+  map directories).</li>
+<li><strong>Malay in the code</strong>: <code>Nombor</code> (number), <code>kiri</code>/<code>tengah</code> (left/middle, in the old RSS
+  feed), <code>mana</code> (where). The script folder is named <strong><code>jafa/</code></strong> — NZ slang for an Aucklander.</li>
+<li><strong>Slashdot puppet accounts</strong> seeded the 2006 game: <code>foundme</code> (bio "Do you readme.txt?", sig
+  "Please stop entering code 2,2,7,6,6,4"), <code>blackwater</code> (user id <strong>227664</strong>), and <code>tfeyet</code>
+  (user id <strong>974444</strong>, revealed in-game as "him").</li>
+</ul>
+<p>Read together: a Malaysian-Chinese hobbyist developer from Batu Pahat, living in New Zealand,
+who has paid for one small VPS to keep this running for 22 years.</p>
+<hr />
+<h2>The three eras</h2>
+<h3>Era 1 — 2004–2006: the <em>Lost</em> console (ASP.NET / IIS)</h3>
+<p>Enter <code>227664</code> to reset a 99-minute timer, bump a decimal counter, and sometimes receive
+1–4 <strong>keys</strong> (N/S/E/W) to move on a hidden 10×10 room grid. State was partitioned by IP block
+("your designated server" in <code>readme.txt</code>). A week-long puzzle chain (<code>i0</code>–<code>i4</code>) led, via
+screenshots interleaved at 5-pixel intervals and column-shift steganography, to the message
+<strong>"HE IS THE CODE ON SLASHDOT"</strong> and ultimately to Slashdot user <code>tfeyet</code> (uid 974444). The
+Unfiction team <strong>reached the checkpoint</strong> by entering <code>227664</code> then <code>974444</code> on 25 May 2006.
+The puppet-master never contacted the winners, and the game stalled. The full 230-post thread
+is in <a href="evidence/unfiction_thread_2006.txt"><code>evidence/unfiction_thread_2006.txt</code></a>.</p>
+<h3>Era 2 — 2006–2008: the bunkers</h3>
+<p>The homepage became a 21×12 grid of <strong>252 "bunkers"</strong> you applied for by email; a code was
+emailed and had to be entered within 24 hours. The target image <code>x1.gif</code> (below) spells
+<strong>"HELLO!"</strong> then <strong>"227664"</strong> in a 3×5 pixel font, one color per glyph — decoded here for the
+first time. The community never reconstructed it. By 2008 the ASP.NET app was dead; by
+2016–2021 it threw a runtime error.</p>
+<p align="center"><img src="evidence/x1.png" alt="x1.gif target grid spelling HELLO 227664" width="500"></p>
+
+<h3>Era 3 — 2022–present: the "doors" console (PHP / Plesk)</h3>
+<p>A from-scratch PHP rebuild, same GIF assets, far simpler. Enter <code>227664</code> → <code>GET t.php</code> resets
+a 6000-second server timer. Any other number → <code>GET l.php?&lt;n&gt;</code>, which always returns two bytes.
+The hidden line and the <code>&lt;head&gt;</code> keys are the whole puzzle surface. This is the live site, and
+the rest of this document is about reverse-engineering it.</p>
+<hr />
+<h2>The reverse engineering</h2>
+<h3>The hidden counter, and what it actually tracks</h3>
+<p>We pulled every distinct archived homepage (75 of them) and extracted the counter at each
+point — the script is <a href="xccr_probe.py"><code>xccr_probe.py wayback</code></a>, the series is
+<a href="data/wayback_series.json"><code>data/wayback_series.json</code></a>:</p>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th>hidden line</th>
+<th>keyB1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2022-01 → 2023-10</td>
+<td><code>0.00000000 / 0.00000227 = B1a</code> (+ <code>0 / 7 = D1a</code>)</td>
+<td><code>abcdefghijklm</code></td>
+</tr>
+<tr>
+<td>2023-10-15</td>
+<td><code>0.00079082 / 0.00227664 = B1b</code></td>
+<td><strong><code>D</code></strong><code>bcdefghijklm</code></td>
+</tr>
+<tr>
+<td>2023-10 → 2024-01</td>
+<td>decays to <code>0.00034682</code>, sits there</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-06 → 07</td>
+<td>climbs to <code>0.00197882</code> (someone's keepalive script)</td>
+<td></td>
+</tr>
+<tr>
+<td>2024-09-12 → now</td>
+<td><strong>frozen at <code>0.00212282</code></strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Three things fall out:</p>
+<ol>
+<li><strong>Every counter value ends in <code>…82</code></strong> = the wallet's <code>34,682</code> sat plus 300-sat steps. The
+   goal ends in <code>…64</code>. <strong>The timer alone can never land on the goal</strong> — a deposit is
+   structurally required. This had never been computed.</li>
+<li>The counter <strong>rises ~300 sat/hour while the timer is alive, decays when it isn't, and
+   floors at the Bitcoin wallet balance</strong> (confirmed on-chain, <a href="data/chain.jsonl"><code>data/chain.jsonl</code></a>).</li>
+<li>It has not moved since September 2024 despite the timer being kept alive — the hourly
+   accrual job is dead.</li>
+</ol>
+<h3>The experiment: we put money in</h3>
+<p>The cleanest way to tell "intended deposit" from "dead cron" apart was to make the deposit and
+watch. On 2026-10-17 we sent exactly <strong>15,382 sat</strong> (≈ $12.50, the gap to the goal) to the
+doorB address <code>1G9rG47hF8ckTT6icgHFV3qWBDPjkj4wME</code>
+(<a href="https://mempool.space/tx/43da77fcd4911557629f389d1872d623e8ef1365e6d762286a36e5b14d308ae7">tx <code>43da77fc…</code></a>,
+confirmed in block 971869). Then we held the timer alive for 24 hours and snapshotted the page
+every 10 minutes (<a href="data/state.jsonl"><code>data/state.jsonl</code></a>, <a href="data/trigger.jsonl"><code>data/trigger.jsonl</code></a>).</p>
+<p><strong>Result: no change.</strong> And the Wayback series explains why — it settles the counter model:</p>
+<ul>
+<li>During <strong>B1a</strong>, the wallet already held 34,682 sat for 11 months while the counter read
+  <code>0.00000000</code>. So the counter is <strong>not</strong> the live balance.</li>
+<li>The <strong>B1b floor equals the wallet balance at the exact moment of the Oct-2023 slot
+  transition.</strong> The author relaunched the slot then and seeded the floor from the balance.</li>
+</ul>
+<p><strong>Conclusion: the wallet is read once, at an author-triggered slot transition — not live.</strong>
+Our deposit can only matter if the author ever starts a new slot, at which point the new
+balance (50,064 sat) becomes the next floor. There is no player-side action that advances the
+current slot. The $12 bought a clean negative result, which is the point of an experiment.</p>
+<h3>The keys are a message, not a cipher</h3>
+<p>The four <code>keyB*</code> rows concatenate into a 52-character buffer over <code>a…z A…Z</code>. In 2022 it was
+the identity alphabet. <strong>Solving B1a overwrote position 1: <code>a</code> → <code>D</code>.</strong> So a slot name <code>B1x</code> =
+door B, key-row 1, character position <em>x</em> (a=1, b=2, …), and each solved slot overwrites one
+character. Read in order, the slots <strong>spell a word</strong>. We have the first letter: <strong><code>D</code></strong>. The
+"wallet address" is doubling as the buffer being overwritten. This mechanic is undocumented
+anywhere else.</p>
+<h3>The QR code (<code>b1-x.png</code>): real, cropped on purpose, and unrecoverable</h3>
+<p>The only other asset is a partial QR. We did a clean module extraction (finder and timing
+patterns intact → <a href="data/qr_grid.npy"><code>data/qr_grid.npy</code></a>) and decoded the format-info block:
+it is a <strong>valid</strong> format — <strong>ECC level H, mask pattern 6</strong>. A decorative fake would not carry
+self-consistent format bits, so this is a genuine QR the author deliberately cropped.</p>
+<p align="center"><img src="evidence/qr_extracted_modules.png" alt="extracted QR modules" width="260"></p>
+
+<p>It cannot be brute-reconstructed from this image, and not for lack of effort:</p>
+<ul>
+<li>It is the top-left <strong>~⅓</strong> of a ≥29×29 symbol.</li>
+<li>QR data is placed bottom-right → up, so the <strong>mode indicator, length, and start of the
+  message are in the missing corner</strong>; what we hold is the padding tail.</li>
+<li>ECC-H corrects ≤22 erased codewords per block; we are missing ~2× that. <strong>This is an
+  information-theoretic wall, not a tooling gap.</strong> Brute-forcing versions/masks does not add
+  back data that isn't present.</li>
+</ul>
+<p>It becomes solvable only if another quadrant (<code>b2-x</code>, <code>b1-y</code>, …) is ever uploaded — the
+<code>assets</code> watcher catches that — or a less-cropped capture surfaces.</p>
+<h3>Odds and ends we ruled out</h3>
+<ul>
+<li><strong><code>favicon.ico</code> "second layer"</strong> (a 2006 loose end): it is the stock Windows document icon.</li>
+<li><strong>Sister sites</strong> share the identical HTML template but carry <strong>none</strong> of the door/key/counter
+  machinery. The game lives only on xccr.com.</li>
+<li><strong><code>l.php</code> guesses</strong> — the <code>contact</code> meta digits (<code>12345678</code>, …) and the era-1 Slashdot IDs
+  (974444, 975093, 897346) — all return the 2-byte baseline.</li>
+</ul>
+<hr />
+<h2>Methodology / reproduce it yourself</h2>
+<p>Everything here is stdlib Python plus the public web. The monitor is one file,
+<a href="xccr_probe.py"><code>xccr_probe.py</code></a>:</p>
+<pre><code class="language-bash">python xccr_probe.py snapshot      # fetch + parse the live page, diff vs last run
+python xccr_probe.py wayback       # rebuild the counter time series from the Internet Archive
+python xccr_probe.py chain         # BTC (doorB) + DOGE (doorD) balances, on-chain
+python xccr_probe.py assets        # hash every file in /images/ and /icons/, diff vs manifest
+python xccr_probe.py dirs          # probe plausible sibling paths
+python xccr_probe.py trigger --mode referer   # measure how t.php resets the timer
+python xccr_probe.py keepalive --every 30 --hours 60   # hold the timer alive, watch for change
+python xccr_probe.py lphp --list candidates.txt        # try structured code guesses on l.php
+</code></pre>
+<p>It keeps all state in <code>data/</code> as append-only JSONL, so every run is a diff against the last.
+<code>t.php</code> only resets the timer with a same-origin <code>Referer</code> header; the probe handles that.</p>
+<p><strong>Note on ethics / scope.</strong> This repo only ever makes ordinary HTTP GETs to a public site and
+reads public blockchain + Internet Archive data. It does <strong>not</strong> attempt the server's admin
+panel, mail, or FTP, and it does not brute-force credentials. The one real-world action was a
+single small on-chain donation to a wallet the site itself advertises, made to test a
+documented hypothesis.</p>
+<h2>Data &amp; evidence</h2>
+<table>
+<thead>
+<tr>
+<th>path</th>
+<th>what</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="FINDINGS.md"><code>FINDINGS.md</code></a></td>
+<td>the dense working dossier (everything, with sources)</td>
+</tr>
+<tr>
+<td><a href="xccr_probe.py"><code>xccr_probe.py</code></a></td>
+<td>the monitor/analysis tool</td>
+</tr>
+<tr>
+<td><a href="data/"><code>data/</code></a></td>
+<td>JSONL state logs, the counter time series, the QR module grid</td>
+</tr>
+<tr>
+<td><a href="evidence/"><code>evidence/</code></a></td>
+<td>contact sheets, the decoded <code>x1.gif</code>, the QR render, the infographic</td>
+</tr>
+<tr>
+<td><a href="evidence/unfiction_thread_2006.txt"><code>evidence/unfiction_thread_2006.txt</code></a></td>
+<td>the full 2006 Unfiction thread (230 posts)</td>
+</tr>
+<tr>
+<td><a href="evidence/wayback_homepages/"><code>evidence/wayback_homepages/</code></a></td>
+<td>90 archived homepage captures, 2008–2026</td>
+</tr>
+</tbody>
+</table>
+<h2>Sources</h2>
+<p>Live site + <code>jafa/*.js</code>; Internet Archive CDX (1,212 distinct captures); the restored Unfiction
+thread <em>[XCCR] Trailhead</em> (2006); r/XCCR, r/UnresolvedMysteries, r/ARG; Slashdot profiles;
+mempool.space; RDAP (Verisign) and APNIC. The fan wiki at craftworks.top/xccr was a useful
+starting point; where it is wrong (the QR upload date, "offline 2016–2022," the counter
+behavior), <code>FINDINGS.md</code> says so.</p>
+<h2>License</h2>
+<p>Findings and text: CC BY 4.0. Code: MIT. Do what you like; a link back is appreciated.</p>

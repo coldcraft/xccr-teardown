@@ -1,0 +1,1072 @@
+[
+ {
+  "ts": "20080223180008",
+  "sets": -1948487,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20080704054602",
+  "sets": -2425486,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20090826114949",
+  "sets": -12647227,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20090926212613",
+  "sets": -15360205,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20091211225544",
+  "sets": -1548980,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20100111131533",
+  "sets": -4192569,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20100213121151",
+  "sets": -7039948,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "01001011"
+ },
+ {
+  "ts": "20110530005630",
+  "sets": -30001,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110629153915",
+  "sets": -1454192,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110718125305",
+  "sets": -386617,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110719161416",
+  "sets": -23557,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110719161432",
+  "sets": -23576,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110806071225",
+  "sets": -1546260,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110826014058",
+  "sets": -300232,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20110929041855",
+  "sets": -3247195,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20120204231025",
+  "sets": -5636583,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20120206151709",
+  "sets": -5780988,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20130628155809",
+  "sets": 66191,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20130628161710",
+  "sets": 65050,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20130628193904",
+  "sets": 57763,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20130802022953",
+  "sets": -2824312,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20131230184048",
+  "sets": -15838964,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20141218115058",
+  "sets": -12718971,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20150326174430",
+  "sets": 68964,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20150919151246",
+  "sets": -125904,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20151011175250",
+  "sets": -111831,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": "00000000"
+ },
+ {
+  "ts": "20220116003218",
+  "sets": 5254,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220116040212",
+  "sets": 5827,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220118071922",
+  "sets": 4910,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220118081930",
+  "sets": 1302,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220126132827",
+  "sets": 5493,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220126133734",
+  "sets": 5770,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220126133811",
+  "sets": 5733,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220318220326",
+  "sets": 3341,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220322072031",
+  "sets": -2,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220522003620",
+  "sets": 3331,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220522003642",
+  "sets": 3309,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220523233831",
+  "sets": 4634,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220525034343",
+  "sets": 3452,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220602232041",
+  "sets": 3565,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220622141803",
+  "sets": 5510,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220628121244",
+  "sets": 5739,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20220725092308",
+  "sets": 4282,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20221009164134",
+  "sets": 5698,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20231003071928",
+  "sets": 2802,
+  "counter": "0.00000000",
+  "goal": "0.00000227",
+  "slot": "B1a",
+  "keyB1": "abcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00000000 / 0.00000227 = B1a",
+   "0 / 7 = D1a"
+  ],
+  "statsmid": ""
+ },
+ {
+  "ts": "20231015062005",
+  "sets": 5594,
+  "counter": "0.00079082",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00079082 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00079082"
+ },
+ {
+  "ts": "20231015133608",
+  "sets": -2,
+  "counter": "0.00077582",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00077582 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00077582"
+ },
+ {
+  "ts": "20231022140255",
+  "sets": -2,
+  "counter": "0.00057482",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00057482 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00057482"
+ },
+ {
+  "ts": "20231127193838",
+  "sets": 4963,
+  "counter": "0.00035282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00035282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00035282"
+ },
+ {
+  "ts": "20231127225021",
+  "sets": 5374,
+  "counter": "0.00035582",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00035582 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00035582"
+ },
+ {
+  "ts": "20231203140553",
+  "sets": 229,
+  "counter": "0.00035282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00035282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00035282"
+ },
+ {
+  "ts": "20231213135213",
+  "sets": 1812,
+  "counter": "0.00037682",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00037682 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00037682"
+ },
+ {
+  "ts": "20240113231403",
+  "sets": 5479,
+  "counter": "0.00034982",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00034982 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00034982"
+ },
+ {
+  "ts": "20240121034359",
+  "sets": 5211,
+  "counter": "0.00034682",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00034682 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00034682"
+ },
+ {
+  "ts": "20240621061057",
+  "sets": 5904,
+  "counter": "0.00037982",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00037982 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00037982"
+ },
+ {
+  "ts": "20240621110108",
+  "sets": 5659,
+  "counter": "0.00039482",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00039482 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00039482"
+ },
+ {
+  "ts": "20240621174749",
+  "sets": 5940,
+  "counter": "0.00041282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00041282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00041282"
+ },
+ {
+  "ts": "20240622234107",
+  "sets": 5899,
+  "counter": "0.00050282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00050282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00050282"
+ },
+ {
+  "ts": "20240703172125",
+  "sets": -2,
+  "counter": "0.00055682",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00055682 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00055682"
+ },
+ {
+  "ts": "20240716221622",
+  "sets": null,
+  "counter": null,
+  "goal": null,
+  "slot": null,
+  "keyB1": null,
+  "keyD1": null,
+  "b_lines": [],
+  "statsmid": ""
+ },
+ {
+  "ts": "20240731053920",
+  "sets": 5444,
+  "counter": "0.00197882",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00197882 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00197882"
+ },
+ {
+  "ts": "20240731174453",
+  "sets": 5112,
+  "counter": "0.00197882",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00197882 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00197882"
+ },
+ {
+  "ts": "20240810125520",
+  "sets": -2,
+  "counter": "0.00179582",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00179582 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00179582"
+ },
+ {
+  "ts": "20240912155347",
+  "sets": 4577,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20241213185833",
+  "sets": 4291,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250409061004",
+  "sets": 5400,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250410002922",
+  "sets": 4242,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250423174728",
+  "sets": 4955,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250518163154",
+  "sets": 5889,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250530101502",
+  "sets": 5101,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250616124306",
+  "sets": 5217,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250711181246",
+  "sets": 5238,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250720071537",
+  "sets": 5066,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250807095030",
+  "sets": -2,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250817091647",
+  "sets": 4995,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20250913104534",
+  "sets": 2225,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20251008095303",
+  "sets": 2817,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20251113144004",
+  "sets": 3597,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20251114221319",
+  "sets": 5201,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20251115144048",
+  "sets": 3553,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20251207155307",
+  "sets": 2147,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20251227112226",
+  "sets": 5990,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20260101095514",
+  "sets": 4808,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20260119113023",
+  "sets": 3540,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ },
+ {
+  "ts": "20260215105518",
+  "sets": 2837,
+  "counter": "0.00212282",
+  "goal": "0.00227664",
+  "slot": "B1b",
+  "keyB1": "Dbcdefghijklm",
+  "keyD1": "abcdefghijklm",
+  "b_lines": [
+   "0.00212282 / 0.00227664 = B1b"
+  ],
+  "statsmid": "0p00212282"
+ }
+]

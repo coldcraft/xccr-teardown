@@ -1,0 +1,305 @@
+
+    CraftWorks
+            XCCR.com
+                    Video is out now!
+                The History (2004-2008)
+                    The site went unnoticed for a couple of years, until the user Stormalong on the
+                        Unfiction forums created a post describing the discovery:
+                        Typing 227664 as mentioned in the Slashdot post resulted in a grid appearing,
+                            and in the subsequent days the website changed to also show the question: ARE YOU
+                                HIM?
+                    Upon seeing this, Stormalong's curiosity grew. What did this mean? He began to dig further,
+                        investigating the website's files.
+                    Files discovered in /images
+                    readme.txt
+                    The correct code for your designated server must be entered at least once every ninety nine minutes.
+Failure to do will result in the loss of valuable resources, and delay in the successful completion of this program.
+Each successful input of the code will either open a closed door or close an open door.
+You must not attempt to use the console for anything else other than for entering the code.
+Each person may only enter the code once every 10 minutes.
+The first team to arrive at the next checkpoint will be contacted and rewarded accordingly.
+                    progress.txt
+                    i0 [1] 1.00 N
+i1 [1] 2.00 N
+i2 [1] 3.00 N
+                    Shortly after that the site's background changed: it began displaying an image,
+                        i0.gif, in the top-left corner of the screen.
+                    i0.gif
+                    May 18th, 2006
+                    The image appeared to contain two interleaved images. After separating them, two screenshots were
+                        revealed:
+                    User Domster was the first to match these two screenshots to their sources: on
+                        the right, the Unfiction forums discussion; on the left, the header to the sos-dan forum,
+                        another place where the xccr investigation was taking place.
+                    Right after posting about this on the Unfiction forum, progress.txt was updated:
+                    i0 [1] 1.00 Y 18-May-2006 08:42 U 10364
+                    This recorded Domster's user ID along with the exact timestamp of when he posted the solution.
+                        One point awarded. The puzzle master had acknowledged him.
+                    i1.gif
+                            May 23rd, 2006
+                            In the same way i0.gif was solved, i1.gif contained two images
+                                interlaced with each other at 5-pixel intervals. Decoding the image yielded two forum
+                                screenshots again (Unfiction and sos-dan).
+                            People noticed two deliberate differences between the actual forums and these images:
+                                In the sos-dan post, the Y in the word “dynamic” was replaced with
+                                    a
+                                    V.
+                                In the Unfiction posts, a 5 was replaced with an S
+                                    in the
+                                    post count.
+                            Looking closer at the posts showed:
+                                sos-dan showed: (2)(6)64
+                                Unfiction showed: 1097(5)
+                            Progress update for i1:
+                            i1 [1] 2.00 Y 23-May-2006 01:52 U 10364
+                            Two points awarded.
+                    i2.gif
+                    May 21, 2006
+                    That morning, a new GIF (i2.gif) appeared. If you take all frames of the GIF, it
+                        spells out a message:
+                    EVERYONE IS DOING IT WELL, HENCE RECORD ENSURED DONE WITHOUT BROKEN COUNTS. IF YOU HOPING OF SOME HINT TO FIND HIM, THESE MUST LOOK PAST SKIN DEEP. SMASH EACH FIVE PX. YOU SHALL FIND IT.
+                    i3.gif
+                    The next GIF, i3.gif, was solved by moving the columns up until the tops of the blue
+                        bars matched. The message extracted was:
+                    HIM MUST BE ANSWERED WITH CLUE FOUND IN I2 GIF END
+                    Following that hint, contestants looked “past skin deep” in the frames of i2.gif.
+                        The GIF had 7 frames with 6 columns. By taking column selections from various frames (as
+                        indicated by 227664), the message found was:
+                    HE IS THE CODE ON SLASHDOT
+                    Participants then searched Slashdot for users matching those clues. They found a user
+                        227664. Another clue came from the first letters of each line of
+                        readme.txt:
+                    t f e y e t
+                    This corresponded to another valid user on Slashdot: tfeyet, which led to more
+                        profile clues and further puzzle branching.
+                    Progress update:
+                    i2   [1]   2.50   Y   24-May-2006 01:38   U   800
+                    ```
+                    i4.gif
+                            User tamerlane on Unfiction found i4 in the images
+                                directory. It
+                                was a sideways image of text:
+                            /./~dDwyMDYNTIwNzMOzsmUPIfvctxrGnrbRqhbJQ
+                            This was linked to a similar-looking string hidden in the HTML source:
+                            <input type="hidden" name="__VIEWSTATE" value="dDwyMDY1NTIwNzM1Ozs+mUPIfvct33x8rGnrbRqh93b6J3Q=" />
+                    The difference between the strings was mostly numeric characters and some base64-like padding
+                        (+ and =). Separating the numbers and using them as a Slashdot user id
+                        pointed to profile 113389363, a clue that tied back into earlier leads.
+                    That particular profile didn't immediately yield new puzzle content, but it acted as a node in
+                        the chain (and was used to help solve i2.gif earlier).
+                    The bunkers
+                    September 22, 2006
+                    The page now displayed a grid of “bunkers” with flashing lights. In the code of this new version,
+                        an embedded hidden string was discovered
+                        by user k.a.n.d.i:
+                    t<-120541006;t<;l<i<1>;>;l<t<;l<i<0>;>i<1>;>;l<t<p<p<l<Visible>;l<o<f>;>>...;t<p<p<l<Text>;l<Once your application has been accepted, the correct code for this bunker will be emailed to you.\<p>The correct code must then be entered within the first 24 hours, otherwise this bunker will be made available again.\<p>;o<f>;>>...G"}�{�L�4�����IV
+                    The readable portion said:
+                        Once your application has been accepted, the correct code for this bunker will be emailed to
+                        you.
+                        The correct code must then be entered within the first 24 hours, otherwise this bunker will be
+                        made available again.
+                    Aside from that string, there was nothing else obviously notable about the new version. Forum
+                        activity quieted, and for a while the site returned to its original look.
+                    The Domain
+                    XCCR.com was registered in 2004, but went offline from 2016 until 2022, seemingly having changed
+                        hosts from Windows Server IIS to Plesk.
+                    The domain has the following DNS records:
+                        xccr.com MX 0 10 webmail.techservers.net
+                        xccr.com MX 0 10 mail.xccr.com
+                        xccr.com A 0 103.7.11.66
+                        www.xccr.com A 0 103.7.8.100
+                        Note: Quite strangely it has an MX record (email) for techservers.net, however
+                        visiting
+                        the site
+                        will result in 404. It's probably not relevant to the XCCR website anymore.
+                        It used to display the text 'Nothing here to see' before 2021.
+                    Going to www.xccr.com will also result in an error page, probably due to some server
+                        misconfiguration.
+                    The Plesk admin login page is available at https://xccr.com:8443,
+                        though useless
+                        for us.
+                    Directories
+                    https://xccr.com/images/
+                    q1.gif: "Are you him?"
+                    Keys pointing in the cardinal directions: remnant from an earlier version of the website from
+                        December
+                        2006.
+                    https://xccr.com/icons/
+                    Remnant from when the website was hosted with IIS. Nothing of note here.
+                    https://xccr.com/jafa/
+                    Cannot browse, but contains keys.js, countdown.js and addevent.js
+                    Files
+                    Except the images and icons there are the following known files:
+                    https://xccr.com/t.php
+                    Called when inputting 227664, then the page reloads.
+                    Probably stands for timer.php, and is the file that handles resetting the timer.
+                    https://xccr.com/l.php
+                    Expects a number as an argument, no known response.
+                    https://xccr.com/b1-x.png
+                    Partial QR code.
+                    Codes
+                    Currently, we know of 1 code:
+                        227664 - Reloads the page and starts a 100 minute timer. It's implied that
+                        within
+                        the
+                        end of the
+                        timer we should send another code to do... something.
+                    Hidden Stuff
+                    Selecting all of the text on the webpage, hidden text appears:
+                    0.00212282 / 0.00227664 = B1b
+                    The number on the left was slowly increasing, when it suddenly stopped sometime last year.
+                    The number on the right seems to be the goal number.
+                    B1b probably refers to KeyB1, character b: When the first number will equal the second, the
+                        website
+                        will
+                        probably
+                        update to give us the next character.
+                    In the HTML head, there are doors and keys:
+                        <meta name="DESCRIPTION" content="Please enter the numbers before time
+                            runs
+                            out.">
+                        <meta name="doorB" content="1G9rG47hF8ckTT6icgHFV3qWBDPjkj4wME">
+                        <meta name="keyB1" content="Dbcdefghijklm">
+                        <meta name="keyB2" content="nopqrstuvwxyz">
+                        <meta name="keyB3" content="ABCDEFGHIJKLM">
+                        <meta name="keyB4" content="NOPQRSTUVWXYZ">
+                        <meta name="doorD" content="DADbBq34cngE8rzyRnJv8RJjzVyKqbqYhC">
+                        <meta name="keyD1" content="abcdefghijklm">
+                        <meta name="keyD2" content="nopqrstuvwxyz">
+                        <meta name="keyD3" content="ABCDEFGHIJKLM">
+                        <meta name="keyD4" content="NOPQRSTUVWXYZ">
+                    We solved the first character of KeyB1, as we reached the goal of 0.00000227 around 3 years ago.
+                        Since
+                        then the goal
+                        has changed to the current 0.00227664.
+                        DoorB Cryptocurrency Wallet:
+                        1G9rG47hF8ckTT6icgHFV3qWBDPjkj4wME
+                        On the 22nd of November 2022 it received 0.00034682 BTC (5.75USD).
+                    Additionally there are 2 hidden text boxes:
+<input type="textbox" id="TextBox_Numbers" name="TextBox_Numbers" readonly="true" class="form2">
+<input name="TextBox_IP" type="text" value="127.0.0.1" readonly="readonly" id="TextBox_IP"class="form2">
+                    TextBox_Numbers is needed for the functioning of the site, holding the inputted numbers to then
+                        send
+                        to
+                        l.php.
+                    TextBox_IP has a default value of 127.0.0.1 (indicating the local computer), but is not accessed
+                        anywhere
+                        in the js
+                        code.
+                    QR Code (b1-x.png)
+                    The original image only shows the top left part of the QR code, we're assuming it's the standard
+                        25x25
+                        version.
+                    Using PhotoPhorensics we can see extra information that allows us to see one extra row of data
+                        (Originally discovered
+                        by jakeholp123 on Reddit).
+                    It looks like it's the 27x27 version (or bigger). Some bits that can be recovered should be 1,
+                        but in
+                        the 25x25 version it's impossible for them to be 1.
+                    Here's my best reconstruction.. it's missing way too much to be readable.
+                    JavaScript
+                    https://xccr.com/jafa/keys.js:
+//ENTER key
+case 13:
+if ( document.PUSH.TextBox_Numbers.value.length > 0 && document.PUSH.TextBox_Numbers.value == "227664" )
+{
+    SubmitNow(Submit_CallBack);
+}
+SubmitLater();
+break;
+function Submit_CallBack()
+{
+location.reload();
+}
+function SubmitNow(callback)
+{
+    var xmlhttp = new XMLHttpRequest();
+    ...
+    //t.php will ignore direct page request, will only trigger from here
+    xmlhttp.open("GET", "t.php", true);
+    xmlhttp.send();
+}
+function SubmitLater()
+{
+    var xmlhttp = new XMLHttpRequest();
+    ...
+    //l.php will ignore direct page request, will only trigger from here
+    xmlhttp.open("GET", "l.php?" +document.PUSH.TextBox_Numbers.value, true);
+    xmlhttp.send();
+}
+                    If the inputted number is 227664, the SubmitNow function calls t.php with no parameters, then
+                        reloads
+                        the
+                        page to
+                        presumably make the timer show up.
+                    Any other number is sent to l.php.
+                    https://xccr.com/jafa/countdown.js:
+function Repeater()
+{
+    seconds--;
+    if ( seconds > 0 )
+    {
+        CountDown();
+        setTimeout("Repeater()",1000);
+    }
+    else if ( seconds > -3 )
+    {
+        window.location.reload(true);
+    }
+    else
+    {
+        document.getElementById("statsleft").innerHTML = "";
+        //document.getElementById("statsright").innerHTML = "";
+    }
+}
+                    Just gets the number images from the /images directory, and reloads the page if the countdown is
+                        between
+                        0 and -3
+                        seconds.
+                    If the timer somehow gets below -3 seconds, it clears out statsleft, although it's already empty
+                        when
+                        loading the
+                        xccr page.
+                    Note: -3 seconds is probably a grace period in case the browser fails to execute
+                        the
+                        javascript
+                        timer accurately.
+                    https://xccr.com/jafa/addevent.js:
+                    Just adds a listener for the input to work. Nothing special.
+                    Other websites hosted on the same IP
+                    Note: I'm not 100% sure these websites belong to the same owner as xccr, however they share
+                            cloudflare nameservers and ssl certificate (to palmy.nz).
+                    sg2065.com
+                    Page displays a simple countdown until 2065. The domain was registered 30/09/23, 12 days before
+                        the
+                        b1-x.png partial
+                        QR code was uploaded to the server on 11/10/23.
+                    Nothing hidden in the source code at a first glance.
+                    There's also mail.sg2065.com that goes to a different IP: 198.54.120.142
+                    There is a login for cpanel on port 2083 and webmail on port 2096
+                    palmy.nz
+                    Just a gray screen, nothing hidden from what I can tell.
+                    UPDATE:
+                    This site updated on the 3rd of August 2026 at 05:11:08 GMT, it is now a very simple website, built using tables and old-school methods.
+                        It currently showcases a story from  about a measles case in Palmerston North, with a link to the full article on stuff.co.nz
+                    basong.my
+                    Just displays a static image of the company logo. It is an actual registered company in Johor.
+                    They have a telephone number too, wonder if it still exists.
+                    The image on the site is dated 31/10/23.
+                        Looking at earlier version on the wayback machine, it redirected to basong.com. We
+                        have a list of employees though! basong.com will also lead to envi-slippers.com, that too is
+                        registered in
+                        Singapore, and has the same nameservers as xccr, meaning it most probably belongs to the same
+                        CloudFlare account.
+                    xmoo.net
+                    Just displays a 404 page.
+                    Looking on the wayback machine, this domain seems to have the most interesting history:
+                        Before 2004 it redirects to xmoo.com, a virtual stack exchange.
+                        Between 2004 and 2021 it was the homepage for the XMoo network, along with I-Moo-U messaging
+                            and
+                            other partners
+                            of the network.
+                        After 2021 the site just displayed a single ..
+                        Between September and December 2023, the site changed to the current 404 page.
+                    Total time wasted researching xccr: more than i'd like to admit
+                    Updated the 29th of August 2026.

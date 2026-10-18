@@ -1,0 +1,2 @@
+{"ts": "2026-10-17T13:32:06Z", "event": "deposit_sent", "to": "1G9rG47hF8ckTT6icgHFV3qWBDPjkj4wME", "sat": 15382, "usd": 12.52, "fee_usd": 3.1, "via": "Cash App on-chain withdrawal", "counter_before": "0.00212282", "goal": "0.00227664", "slot_before": "B1b", "keyB1_before": "Dbcdefghijklm", "txid": null}
+{"ts": "2026-10-17T13:34:06Z", "event": "deposit_in_mempool", "txid": "43da77fcd4911557629f389d1872d623e8ef1365e6d762286a36e5b14d308ae7", "sat": 15382}

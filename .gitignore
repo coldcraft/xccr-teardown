@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/wayback_home/
+data/cdx.json
+data/*.err
+.venv/

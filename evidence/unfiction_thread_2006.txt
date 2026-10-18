@@ -1,0 +1,1819 @@
+### Stormalong | 
+[XCCR] Trailhead - xccr.com
+So I see this weird sig on Slashdot posted by some guy named "foundme".
+
+ 
+ Quote:
+
+Naturally I'm curious, so I go over there and enter the code. It spits out this strange little diagram and resets the timer. Ok, time to do some digging. Whois isn't really helpful:
+
+ 
+ Quote:
+
+Poking around a little bit I find that the images directory is open for browsing, and contains a rather interesting readme.txt:
+
+ 
+ Spoiler (Rollover to View):
+
+Most entries don't do anything, but I've also gotten some results (the little box picture) from entering 43722 and 3. 
+
+At this point I'm stumped.
+
+### Hyperion | 
+I think the signature is clever. What's the first thing you do when told not to do something? Yep, you probably just awarded his team points, or something.
+
+### Rolerbe | 
+I got the box with 227666 (but not every time). The string of numbers below the input prompt appears to be the string of most recently entered numbers, scrolling from left to right. I noticed this by entering 00000 which was then easy to track across.
+
+What it means, I have no clue. [img:images/smiles/icon_confused.gif]
+
+### Rolerbe | 
+Also in the images directory are 4 images of keys (numbered 1-4 and labeled KW (west -- attached below), KE, KN, KS.gif
+
+[spec] one or more of these will come up if the 'program' succeeds and will provide links to the next level[/spec]
+
+I can't get the box back at the moment [img:images/smiles/icon_sad.gif]
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+kw.gif
+
+ Description
+
+### Rolerbe | 
+Just got the box back with 43722 [img:images/smiles/icon_smile.gif]
+
+I intended to just let it sit and count down for a while before entering again, but others have input numbers and the box (door?) is closed.
+
+Just got the door open with 314159 (common approx for Pi -- maybe the 'codes' are lists of fundamental constants?)
+
+### Macavity | 
+I got the box a couple times with 130359.
+
+### Rolerbe | 
+Hard to keep track of what is working and what is not. Looks like the good numbers only work once every 10 minutes for each player (based on IP address?)
+
+So, my current review:
+
+1. There are a list of numbers that work,
+
+2. Each number works only once every 10 minutes (for that number)
+
+[spec]we need to find the entire list of numbers that work and enter them within the 10 or 99 minute limit.
+
+OR
+
+we need to get the counter (upper left, currently says 3 42) to a certain level[/spec]
+
+### Rolerbe | 
+Got a new boxwith + and - symbols in the left half. Went back to the original number at the start of this thread (227664)
+
+Means???
+
+Interesting note, putting in 227664 doesn't update the running number list.
+
+### chumlee | 
+Lost related?
+This may be too obvious, but is this Lost related, or did they just want to make it look like the screens from the show?
+
+- Chumlee
+
+### chumlee | 
+Not Lost, I think.
+So I don't think this is Lost related.
+
+It looks like you can get a box with many different numbers, but number 227664 is already "owned" by someone playing this game, and her box is filling up since lots of us are putting in her number.
+
+When I get a box putting in random numbers, it's empty. When I got the box for 227664, it was half full of plus signs.
+
+I hope 227664 gets a good prize and comes over and lets us in on the game. [img:images/smiles/icon_smile.gif]
+
+- Vaz
+
+### Rolerbe | 
+Some numbers (sometimes) gives you a box. But doesn't seem to update the upper left counter (now at 3.82).
+
+Some numbers (sometimes) update the upper left counter (by an amount between 1 and about 5 or so), but don't give you a box.
+
+Some of these (sometimes) updates the upper right clock, back towards 99 minutes.
+
+### SamHill | 
+Check the April 28 entry in this blog http://mike.van.lammeren.net/
+
+### chumlee | 
+Just got four keys.
+
+After getting the half-full box with 227644, waited ~10 minutes and re-entered it, I got four keys in the input line. The keys were numbered and the sequence was 3412.
+
+- Vaz
+
+### Stormalong | 
+I think i've figured a little more out by looking at the javascript that drives the page. When you successfully enter the 227664 code and get your keys, the page immediately goes into a different mode. Its *appears* that once you've got your keys up, you can enter 1,2,3 or 4 to make a "move". Which kinda makes sense, since each key seems to indicate a direction. Its possible that each key indicates a valid move you can make, which would explain why sometimes there are different keys. 
+
+When you hit 1,2,3 or 4 the page will imediately do something (no need to hit enter). When I did it, it took me to the same old blank page, but the box at the bottom was still there with all the +'s in it. I think this might indicate that I made the wrong "move". I'm guessing that if you make the right move you'll get another page with more keys and you'll be able to make another move. I'll try again tomorrow, sadly I need to head to bed now.
+
+A couple other observations. The empty box at the bottom seems to just appear at random intervals. If you just keep hitting enter on the page you'll eventually get it. Also, as we know you can only enter your code every 10 minutes. I *think* each time you enter it it resets your 10 minute timer (so if you enter the code again after 9 minutes, you'll get nothing and have to wait another 10 minutes). So don't keep trying it, just be patient.
+
+### Thenre | 
+I put in 14159265 (The numbers after the decimal in pi) and got an interesting animation with the box. 
+
+Also...I don't think I saw this yet...trout me if you must... but the number near the top of the page translates to a decimal from binary. Maybe we're supposed to insert the numbers after the decimal in naturally recurring numbers?
+
+Has anyone let the counter run down to 0 yet? I don't have time right now (in school XD) but I'll try l8er.
+
+### Stormalong | 
+Ok, I think I've got more figured out.
+
+The box doesn't contain pluses. Its a 10x10 grid of rooms. The pluses are the corner walls. It appears to be revealing more of the grid as we go. The rooms are numbered like this:
+
+ 
+ Quote:
+
+The binary number at the top translates into the room we are currently in. When you enter the code (227664) it gives you some keys, when you hit a number you will move in the direction you choose. For example, I just did it, before I started the binary was 00111000 (56). I entered the code, then hit 2 (East). Now the binary reads 01000010 (66). So, I moved 1 square east from 56 to 66. The interesting thing here is that the binary position appears to be global! I had the page open on 2 computers (different IP addresses), I made the move on one computer, then reloaded the page on the other computer and the binary had changed!
+
+So, I'd guess that we have to navigate "us" to a specific spot on the map (the "checkpoint"). No idea where that might be though. [img:images/smiles/icon_smile.gif]
+
+### Rolerbe | 
+I like your analysis, but, but, but...
+
+the binary numbers have been changing all along and I've never gotten the keys (yet). So that would mean that others are moving our position in the grid. But the binary has changed even when I've clearly been the only one inputting at that time (by evidence of the running string of input numbers being all mine, which is not always the case).
+
+Also the 227664 box is not true binary 56, but rather binary coded decimal encoded -- i.e. 0101 0110 (space mine) -- unless the binary that you got was different than mine.
+
+Update -- finally got a key (just #1). Waited a bit and entered 1. Key disappeared, but box stayed up and the binary stayed the same.
+
+### Cousarr | 
+the number e without the decimal: 27182818 got me an empty box.
+
+Edit: as did 143584, A recent UPS invoice number I used...
+
+### xccr | 
+uh oh
+you've given so much away
+
+### Grand Theft Autumn | 
+^ Clearly a poser being *mysterious*
+
+### jamesi | 
+Clearly. Hope it's the last time, too. [img:images/smiles/icon_rolleyes.gif]
+
+### blaqueice | 
+http://xccr.com/smiley.gif 
+
+after some snooping around, i found this....Smappley?
+
+also,,,here is a little template and a trail that i have been taking...if it is truly global then the binary should read "00100011" for you guys as well. I can only make a move every 10 minutes..but maybe by working together we can move a lot faster. I say we try and make it to 100...if that doesnt work maybe we need to press all the buttons. if you google "xccr" the caption for the site is "Please help push the buttons before the time runs out" so maybe we just need to press all of them? anyways,,,whenever you make a move it would be sweet if you updated the "map" so we can see our progress of what buttons have been pressed and all that.
+
+ALSO if you look at foundme's friend list at slashdot , he has one friend. "blackwater" whose number is "227664"...the same number mentioned at the beginning of this thread.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+pushing buttons.JPG
+
+ Description
+
+### another xccr poser | 
+The binary number is not global. Some sort of yet-undetermined division exists between IP blocks. The binary number can be the same for people in certain subnets all the way up to nnn.nnn.* (as found by myself and friends at school), but you can also have two machines with different IP addresses in different subnets, e.g. 123.123.123.1 and 123.123.123.2, who see different binary numbers (and scores and timers). We haven't yet figured out how arbitrary this is, or if it's perhaps (this is our best guess) related to IP block ownership. We haven't really tried either, since it allows someone with a different binary number/score/timer to play around on their own without intervention from someone else. The division is probably directly related to the "server" hint in readme.txt.
+
+BTW, my current number is 01001011. I've gone from 100 to 0 and I'm meandering back to 100 now. Nothing exciting so far.
+
+### blaqueice | 
+"readme.txt" ???
+
+### another xccr poser | 
+Yes, it was mentioned in the first post on this thread.
+
+http://xccr.com/images/readme.txt
+
+### oodoov_ecniv | 
+Strange:
+
+Since I am at work, I downloaded the page and opened it in notepad. I took the IP I found and encoded the first octet into octal:
+
+138 -> 061063070
+
+Then I removed the first zero to make it eight characters and tried it out. 
+
+I got an empty box for my efforts.
+
+EDIT: Seems another oddity has shown itself. When I let the counter fully run down, it not only started over at 87 minutes and change instead of 99, but the 'room' I was in went up one as well. 01100000 to 01100001.
+
+EDIT2: New info: During the final minute I entered 227664 and was rewarded with a set of keys. I chose key 4, but the binary 'room' didn't advance. After checking the grid, I found there to be more '+' signs. From my last count of 23 to 25.
+
+EDIT3: A few more '+' signs and a question. I've only seen it twice, but occationally a small white square will appear on the grid when you enter 227664. Earlier today it was at 36 on the grid, and just a few minutes ago it had moved to 91. Not sure what it means, could just be the crappy IE here at work.
+
+### oodoov_ecniv | 
+Alright, now that I am home and have a moment to lay out what I have seen today....
+
+First, I'm not entirely sure that the numbering on the previously submitted grid is right. I set up one in reference to my own ideas, and I'll attach it below. I say this because just a few minutes ago I was on room 81, got a set of keys (only three, don't remember the missing direction), used #2 (right), and ended up in room 90.
+
+Second, may I draw your attention to the title of the site, specifically the first version of 'xccr'. That is not what it appears to be. I don't really know what to make of it, but notepad see's it as you do, but it's binary is different from the letters they look like. It's ASCII code, when entered as alt+whatever in notepad, comes out to be something completely different as well. The binary code for each character is as follows:
+
+1101 0101
+
+1101 0001
+
+1101 0001
+
+1100 0011
+
+Notice how these characters look different in notepad's native Lucida Console, and your OS' native font.
+
+And finally, the strange white squares I've seen seem to line up perfectly with the center of a 'cell' on the grid. I've left the one's I've seen in the version I've attached with the most recent in white and the others in cyan. I'm not sure what they mean, but they appear regardless of whether you entered a good code or not.
+
+EDIT: It appears that I am wrong about the numbering. Both sets of keys I got this morning lead to the predictable cells. My only explanation is that I am not the only one to get a set at a given time. I have also noticed that the decimal number goes up as the number of '+' signs climb.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+untitled.gif
+
+ Description
+
+### MelonCandy | 
+I found this in the slashdot thread, under a topic, "Wal-mart trying the Trademark the Smiley Face" 
+
+ 
+ Foundme in Slashdot wrote:
+
+With the 'Threesome' being hyperlinked to http://xccr.com/smiley.gif 
+
+So, apparently Mr. Foundme has access to the servers, and thus isn't a player. 
+
+I still don't get what's going on, but I hope that helps. I've heard it has something to do with 'Lost', but I don't watch it, so I don't know.
+
+### Novawo1f | 
+Hey, new to this junk, saw an article in PCG regarding PXC, lead me here, etc. Anyways.
+
+Anyone gotten anything out of the RSS feed?
+
+Don't know if anyone else has found this out.
+
+ 
+ Spoiler (Rollover to View):
+
+### Lola_66 | 
+Today things are different. When you type in 227664 you now get: 
+
+ 
+ Spoiler (Rollover to View):
+
+interesting
+
+### Ciaran_H | 
+oodoov_ecniv wrote:
+
+Interesting. I haven't looked at the page, but in my line of work I have to work a lot with different character sets, and I have some scripts to help me identify character sets. It seems that the characters you're seeing are written in the windows-1251 character set, which is a Cyrillic set. This is how the set looks:
+
+ 
+ Code:
+
+The characters referenced correspond to Unicode codepoints U+0425 , U+0421 , U+0421 and U+0413 respectively.
+
+I don't know how to tie it in, and I can't look at the site right now, but I will do later.
+
+### oodoov_ecniv | 
+Spoiler (Rollover to View):
+
+Has anyone else gotten keys since this change happened? I've tried for about an hour and haven't gotten anything other than the "ARE YOU HIM ?" message.
+
+### Rolerbe | 
+oodoov_ecniv wrote:
+
+Nope. haven't been able to get the white/flashing boxes others have mentioned, just the filled in box. Hven't been able to get the keys back either, following the old 'rules'
+
+### Lola_66 | 
+Me neither. I have gotten the box without any flashing sqaures in it and then once i got the box with 3 flashing squares. I am wondering if the time we input the code has anything to do with what shows up when.
+
+But no keys
+
+### bcat | 
+Hey, I found this forum while searching for info about xccr. Anyway, here's something I noticed: the filename for the "are you him" image is q1.gif. My guess is that there will be more questions added later, and they'll have names like q2.gif, q3.gif, etc.
+
+### Slashdot User | 
+Java Script Any help
+Interesting javascript
+
+http://xccr.com/ajax/PUSH.KEYS,PUSH_KEYS.ashx
+
+### Slashdot user | 
+hold down return
+If you hold down return you'll see the "Are you him?" and the grid.
+
+### Slashdot User | 
+javascript Code
+
+ 
+ Code:
+
+### Rogi Ocnorb | 
+What are all those 2 letter name graphics that come up when you enter the fractional part of pi? (1415926536)? (Do it a couple of times in succession). They are all gif files with two letter names starting with "d".
+
+### Rolerbe | 
+The images directory is open for inspection which shows these are just the pieces of the box.
+
+### blaqueice | 
+the grid is no longer + and -'s but rather an actual full grid with breaks on some of the squares. Every time I see the grid the breaks are in different locations...I've been looking for some sort of a pattern but nothing is jumping out at me. Also, the keys are no longer showing up for me.
+
+### Lola_66 | 
+Today the grid is open on the bottom half and more breaks onteh top half. The blinking square hasn't moved, though.
+
+### Ciaran_H | 
+So, um...
+
+The site seems to be down at the moment. And it seemed to go down immediately after I tried entering the number "5818".
+
+I don't think it's related to me, but I could be wrong.
+
+[edit: Back up again. Doesn't look like it was me at all, I was just being paranoid.]
+
+[edit 2: Actually, it's being really, really slow. Definitely not my fault this time.]
+
+### blaqueice | 
+so the grid is really opening up, the flashing green marker is 6 spaces right, 5 spaces down...for me anyways. Also, there is a .gif image at the top left of the page. The .gif is actually 2 pictures seperated vertically, when pieced together they look like the attached images, i'm guessing we will see more of the image as time passes.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+puzz01.JPG
+
+ Description
+
+### sixsidedsquare | 
+Both of those gifs are inverted colour wise for starters, and the first one reminds me of a slice of a screen shot from some random anime, the subtitle style characters at the bottom are a give away.
+
+As for the second, I'd say we won't be seeing any more of it, as it looks surprisingly familiar...
+
+* Six's eyes stray to the top left of the page *
+
+It looks to just be a nod in this general direction.
+
+---EDIT--- 
+
+Heh, my anime friend (no less than the Otaking of New Zealand) never ceases to amaze me, that top gif is from the anime Suzumiya Haruhi no Yuuutsu. How I love sourcing pictures that shouldn't be possible to be found ^_^
+
+----EDIT EDIT----
+
+Well gee, the other gif in the images folder makes a bit more sense. It's top is the previous pic, and the lower parts extend further down the slices, the one with the obscure anime pic looks to be from a sig where the original slashdot post was (anyone got a link to that?). The other is even more familiar to this thread than I previously thought. That's toeing the line a bit ain't it? (is that the correct usage of that saying?)
+
+### Lola_66 | 
+So today I enter the code and get the grid with a lot of open "doors" .....and a key. ket's see where this takes us.
+
+### Domster | 
+First image
+The first image is from this site:
+
+http://www.sos-dan.com/forums/showthread.php?t=44 
+
+The text matches - the image is a strip through the word help in the subject of the first post - but it appears the site has been redesigned or is being viewed in a different format (Edit: no, that's wrong, I was just confused by the reversed colours). Apart from Unfiction, this site is the only other place I've found that really discussed xccr.
+
+### blaqueice | 
+for those of you that want to see the first picture from the Sekai wo Ooini and the other one from here, ive atached them to this post...i have to go to work so i cant dig any deeper right now.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+puzz03.JPG
+
+ Description
+
+### oodoov_ecniv | 
+Just an observation, but flooding the site with 227664 decreases the counter by 0.01. I suppose this is what was meant by "...a loss in valuable resources, and delay in the successful completion..." All the changes so far have been caused by the counter hitting a certain number. The first was 10, does anyone remember what number it hit when this latest development surfaced?
+
+EDIT: I've tried a few times now, but I am not able to actually occupy the cell with the flashing square. I went from 56 to 54 when I used a #3 key.
+
+EDIT: The counter goes up 0.05 every time you get a key. And the keys do not allow you to open doors themselves, only move through open ones.
+
+### Domster | 
+Moving from 66 to 65 (toward the flashing square) through an open door somehow just took me straight to 85. Strange.
+
+Edit: And then from 85 to 44 after trying to pass through a closed door.
+
+### oodoov_ecniv | 
+Domster: It looks to be randomizing the movement. I just went from 54 to 26 using a #4 key.
+
+### blaqueice | 
+it is possible we have the grid messed up...maybe the numbers are lined up differently...so that is why our movements arent making sense.
+
+### oodoov_ecniv | 
+I suppose that is very possible, and I did see the grid as an x/y plane earlier, but couldn't make it work with the binary number. It is also possible that that binary sting has nothing to do with that 'cell' we are occupying at the moment.
+
+At the moment I am more interested in figuring out what the area at the bottom with no walls is susposed to mean. Especially now that I see that it is expanding upward like the '+' signs did from left to right at the beginning. When all the vertical lines are gone, I would guess that the next stage of the 'program' will initiate.
+
+### Lola_66 | 
+Quote:
+
+Also, if you enter the code every ten minutes, the counter goes up significantly. And Today, the box is blank. Maybe the counter needs to be at a certain level before we get the keys and doors. Has anyone noticeds what this might be?
+
+### Domster | 
+Well, it was (almost) completely blank, and the counter was at 0.05 when I arrived just now.
+
+I decremented it to see what would happen at zero: it never gets there. It goes down to 0.01 and then successive entries of the code don't decrement it any more.
+
+Interestingly, now the box seems to be back, filled in again, and it's got hardly any open doors. (Edit: and now, five minutes later, the counter is back up to 0.04 and the grid is empty again)
+
+Personally, I think the idea is to somehow manage to get people entering the code in a co-ordinated fashion: exactly every ten minutes, and not any more than is needed to get the keys. It might be neccessary to get the number of open doors up a little, but then I think the idea is to concentrate on manipulating the position (I think the position/co-ordinate theory is still pretty accurate).
+
+### Domster | 
+Another interesting thing I just noticed is that the images directory appears to just be an automatically generated directory listing (with Apache, the Options directive and mod_autoindex), but actually isn't. Proof of this is the fact that you can get to the same page by using the url:
+
+http://www.xccr.com/images/index.html 
+
+and the fact that using a sort hyperlink (Last Modified, Size etc.) has no effect on the listing. So, it's quite possible there are images in the directory that we can't see in the listing.
+
+Oh, and of course the real proof it's not an apache index is the fact that the server is IIS [img:images/smiles/icon_smile.gif]
+
+### Reklats | 
+Novawo1f wrote:
+
+ 
+
+Actually, Batu Pahat is just the name of a place in Johor, no special significance (I think).
+
+### MageSteff | 
+blaqueice wrote:
+
+the puzzle04 picture is taken from Unfiction, in a "negative"scale rather than the familiar brown I use. The slice cuts right through the u and the n of the logo at the top left of the page, including the "Welcome" message. 
+
+The avatar and user that is sliced under that appeares to be Stormalong . I can't tell which thread it is from.
+
+### oodoov_ecniv | 
+I think it's been stated that it is a slice of the first page of this thread.
+
+### Lewis the Second | 
+Howdy now, people.
+
+New for today: The top-left logo has gone, replaced by some fast-moving letters?
+
+Looking into it now.
+
+### Lewis the Second | 
+Decompiling the gif gives us a message:
+
+ 
+ Spoiler (Rollover to View):
+
+[sic]
+
+### Domster | 
+I think "hence record ensured one with outer ok en counts" is actually "hence record ensured done with broken counts". "somethint" is "some hint", and "past kind eep smash each five. PX you shall find it." is "past skin deep smash each five px. You shall find it."
+
+You're missing a few letters there. The full quote is:
+
+ 
+ Spoiler (Rollover to View):
+
+I think it's referring to the other i[x].gif images (they were interlaced in 5px chunks). I think there'll be something else in them - steganography anyone?
+
+### audioslave | 
+Ok, this is pretty cool, I was away for a bit and didn't get to see this before.
+
+ 
+ 
+I'm looking at the site and there's a little timer, it has 1:55 or so left, is that the same for everybody? (If this is already mentioned, I'll edit this once I read through) 
+ 
+
+[img:images/smiles/afriendlytrout2.gif] 
+
+Can I acctually trout myself?
+
+Anyway, I think I may play this....
+
+### Lewis the Second | 
+Domster: Good stuff. I'd just woken up [img:images/smiles/icon_lol.gif]
+
+### Lewis the Second | 
+Incidentally, did we decide this is a Lost game in the end? The console is exactly the same as the one on Lost, and the phrase "Are you him?" was used in the program, in this same context, as well.
+
+### Lewis the Second | 
+Ok had a look at that gif again. Both of us were wrong!
+
+It says:
+
+ 
+ Spoiler (Rollover to View):
+
+"Look past skin deep," eh?
+
+### apcfreak | 
+i guess that means that we decompile each 5x5 px image there, i guess there is about 15 or 16 of them..... sorry if this is the obvious....
+
+### Lewis the Second | 
+Anyone get the chance to do some destegging?
+
+### blaqueice | 
+i think we really need to NOT put in anything but 227664 and after each 10 minutes....I think we need to pass the message along to the other forum working on this as well. maybe that is what "broken counts" is reffering to.
+
+http://xccr.com/images/ all of the a[x].gif are 5x5 pixels. I tried destegging a few using camoflage...and i get the "either this image needs a password, or is not stegged." I'm not really down with the whole steg process, so maybe someone else wants to give it a try?
+
+### Lewis the Second | 
+blaqueice wrote:
+
+But if that's the case, why were we specifically told NOT to enter that code?
+
+### blaqueice | 
+so that we would enter it, besides 227664 is the code that gets us the keys and the grid and make the counter go up.
+
+### Lewis the Second | 
+True.
+
+Is it just me or is this getting a bit stagnant already?
+
+### Mercuria | 
+Lewis the Second wrote:
+
+These are two points in favor of it being part of the Lost Experience (there's already a forum on unfiction for it, I've never seen Lost myself but I did a little reading) Another one is the Slashdot ID that got us started, "foundme" -- a play on Lost(?). 
+
+Against that theory:
+
+-"the numbers" that are significant with that show are 4,8,15,16,23,and 42. since XCCR can only handle 8 digits, at least one of those has to be left off. I've tried a number of combinations of them, and they don't appear to be any of the codes that XCCR is looking for.
+
+ - 227664, or any way of breaking that up, has not shown up on Lost -- there are countless blogs out there detailing all of the numbers that have shown up in some significant way on the show. 
+
+- Why pull images from this site and the only other forum discussing it, and post them for only a couple of days?
+
+Indeterminate:
+
+- The indonesian connection in the registry. The island in Lost is somewhere in the Pacific, but otherwise Lost seems to connect more with Indian, specifically Hindu things -- Dharma, Namaste, etc.
+
+### Lewis the Second | 
+I never considered it as part of The Lost Experience - just perhaps it's a grassroots based on the same story?
+
+### blaqueice | 
+Mercuria wrote:
+
+[SPEC] in the readme.txt it mentions teams, maybe we (unfiction) are a team and the other forum is another team and we are to be competing??
+
+### Mercuria | 
+[NEW]
+I just put in my 227664 with only 2:55 remaining, and amongst the usual collection of numbers got 5 broken images -- their file names were dHgif, dE.gif, dL.gif, L.gif, and dO.gif. They definitely have not shown up in the /images directory yet, but apparently it was trying to say HELLO to me. My "map" has been almost empty since this morning (just a few lines in the upper left) and I didn't get any keys this time.
+
+"inspired by Lost" might be a good way of putting this. The Lost thing needed to be entered in every 108 minutes (another significant number in the series), not 99. Also, Foundme is clearly not the result of astroturfing by ABC, the way that the Lost Experience sites are -- his slashdot ID indicates he's been around since before the series started, and he has a long history of pretty cogent posts there. So unless he's an ABC employee giving us a hint before the rest of the Lost Experience
+
+### apcfreak | 
+hmmm.... verry veryy interesting..... would you know where those files WERE located???
+
+### Mercuria | 
+They were supposed to be in the /images directory. That's why they were broken.
+
+As I'm sure you've noticed, the title says &#1061&#1057&#1057&#1043 :: xccr. The first four are Cyrillic characters. The last one actually doesn't translate to an R -- it's a ge, decended from the Greek gamma, which is either a hard G or a hard C in english. If they wanted an R it should be Er, the one that comes from Greek rho, which looks like a P. the middle ones (called an Es) come from Greek sigmas, and are sort of like the c in center. the first one decends from the greek letter chi, just like our X.
+
+Googling for those characters gives xccr as the #1 site, followed by a bunch of Russian gaming sites, which all deal with Half-Life 2. from what I can tell from the Babelfish translation (which I wouldn't put much stock in, since it's translating Half-Life 2 as Half-Bodice 2) that it's seen in that game, perhaps on a poster, perhaps advertising a hotel in Georgia (the country, not the American state.) Apparently both Kha Es Es Ge and Kha Es Es Er are seen there. Someone who can actually read Russian would be needed to confirm that, though.
+
+### Phoen | 
+Re: [NEW]
+
+ 
+ Mercuria wrote:
+
+Sorry about that, was just playing around with some simple javascripts ^^.
+
+Anyway, there seems to be pictures for dots, but you can't acctually enter them normaly?
+
+### Lewis the Second | 
+Re: [NEW]
+
+ 
+ Phoen wrote:
+
+Sorry about that, was just playing around with some simple javascripts ^^.
+
+Anyway, there seems to be pictures for dots, but you can't acctually enter them normaly?
+ 
+
+Yu whu?
+
+### audioslave | 
+Mercuria wrote:
+
+Well it's possbile that the 4 of 42 could be used for the 4
+
+I love Lost, I watch it every week (I missed last week, though, don't tell me anything!!!) and this does not give off an authentic Lost feel, for one, the computer from lost is ancient, it hardly looks like the site xccr site, though I guess it's possible that it's an "inspired by" deal, though I'm pretty sure it's non-related
+
+### Domster | 
+As far as the 'teams' business is concerned, take a look at http://xccr.com/jafa/keys.js 
+
+Specifically, look at the SubmitNow() function and the call it makes to KEYS.SubmitKeys. See the second argument? For me it's a constant "1". Inspecting http://xccr.com/ajax/PUSH.KEYS,PUSH_KEYS.ashx will show that the second formal parameter is called 'team' and ends up being submitted in the XmlHttpRequest.
+
+So, conclusion? Unless anyone has a different number showing up in keys.js (which is possible - it could be server-side generated js) then there's strong (not altogether conclusive) evidence that we're in team 1.
+
+### Lewis the Second | 
+audioslave wrote:
+
+Well it's possbile that the 4 of 42 could be used for the 4
+
+I love Lost, I watch it every week (I missed last week, though, don't tell me anything!!!) and this does not give off an authentic Lost feel, for one, the computer from lost is ancient, it hardly looks like the site xccr site, though I guess it's possible that it's an "inspired by" deal, though I'm pretty sure it's non-related
+ 
+
+I'm still not so sure. The console, the timer, the phrase "Are You Him?" ... all of these roads lead to Lost.
+
+### Lewis the Second | 
+Incidentally, I just got a key again, for the first time since the first day. Number 2. Dunno if this is relevant.
+
+### guset | 
+Anyone here who's good at JavaScripts and would like to explain how it's suposed to work?
+
+As far as I can see by looking at the code, the requirement to use a key is that the textbox contains 8 vertical bars (||||||||) and then it will go in the direction you press (1, 2, 3 or 4), is this correct?
+
+After that I'm kinda lost.
+
+Btw, I entered through sos-dan and got team=1 too.
+
+### Domster | 
+guset wrote:
+
+First, index.aspx calls setS(), which sets the timer at the top right to the server-side decided value. It also calls repeater(), which simply decrements the timer and checks if it's run out (in which case the page is reloaded).
+
+When you type a key ShortKey() is called. If there are more than eight keys already pressed then ShortKey() does nothing. Otherwise, if you pressed enter and one or more keys have been entered it calls SubmitNow(). If you pressed one of the number keys it adds the number to the end of PUSH.TextBox_Numbers.value. If PUSH.TextBox_Numbers.value (the value of the TextBox_Numbers textbox) is equal to "||||||||" then ShortKey() will only accept the numbers 1, 2, 3 or 4 and call GoNow() with one of these as a parameter.
+
+SubmitNow() is the next thing to consider. It takes the values of TextBox_Numbers, TextBox_IP (this is a hidden form variable) and the constant "1" (for team) and passes them to SubmitKeys(), which simply sends them off to the server in ajax.
+
+The callback function from submitting the keys is interesting. The value of the response is split into an array, which then determines which responses you get from the key. The contents of the 'wft', 'statsleft' and 'mana' elements are loaded from this response array. The response array also has the ability to redirect the page (with window.location), and change the value of TextBox_Numbers to ||||||||, enabling the GoNow() functionality.
+
+GoNow calls UpdateMove which, like SubmitKeys(), simply does a bit of ajax. GoNow() submits the number (1-4) you entered and the TextBox_IP field. The callback again loads some elements ('statsmid', 'wtf') from the response and clears other elements ('Nombor','mana', TextBox_Numbers).
+
+And that's pretty much it for the main functionality of the site. If you're looking for a way to get keys by using '||||||||' somehow, forget it. It's much, much easier to just simulate the ajax request from GoNow(). Of course, that goes against the spirit of it I think - you're supposed to get keys when and only when they're given to you.
+
+### guset | 
+Shouldn't you just be able to change the Numbers with
+
+ 
+ Spoiler (Rollover to View):
+
+Also big thanks for that great "tutorial"! [img:images/smiles/icon_smile.gif]
+
+Btw, the site just asked me for a login (like with ftp), has this happened to anyone else?
+
+### guset | 
+There is a progress.txt in that images directory now!
+
+http://www.xccr.com/images/progress.txt 
+
+ 
+ Quote:
+
+### Mercuria | 
+Hm, could this mean that the images are the "checkpoints" mentioned in readme.txt? If so, why is i0 a yes, but not i1? Nobody seems to have figured out what "smash every 5px" means, so it doesn't surprise me that i2 is a no. then again, maybe it means that i0's "every 5 px" has been "smashed". 
+
+I did try checking i0 for steg, nothing, but I may have been using the wrong program. There seem to be a lot more out there for jpegs than for gifs. It seems highly unlikely to me that there's be steg in 5X5 images -- you could only get maybe 3 characters apiece crammed into one, and that's without a password. 
+
+We are assuming that 5 PX means pixels, and that we ought to be looking at images. Could it mean somthing else? maybe we're back to the Cyrillic thing, and that's actually an Er and a Kha.
+
+Also, I don't suppose you got a location on where the image for that login was located, or anything else from the HTML source, guset? It sure hasn't happened to me. Sounds like major progress. Did you do anything special to make it happen? can you replicate it?
+
+Also, should we cross-post some of this to the Lost Experience forum, and see if anyone playing that has a take on it?
+
+### jamesi | 
+Mercuria wrote:
+
+Please, no. I closed a thread in that forum about this game earlier today. If people want to take a look at this, they'll find it.
+
+### tamerlane | 
+guset wrote:
+
+ 
+
+Heh. I think i figured this one out a little bit.
+
+The small mashed up image (i0) was figured out (Y) on 18-May-2006 08:42 on the UnFiction forums (U) by Domster (user 10364).
+
+So, apparently there is something yet to be discovered about the following two images, or the guy (lostme) is just a little slow at checking the boards. [img:images/smiles/icon_wink.gif] Anyway, its cool there is a discussion about this site. I first saw it a while ago and have been wondering what the story was behind it.
+
+### Lewis the Second | 
+Welcome, and good stuff!
+
+I'm having a gander now... bear with me...
+
+### Lewis the Second | 
+Okay, below are the two images. I'll look into where on the forums they're from.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+IMAGE1.jpg
+
+ Description
+
+### Lewis the Second | 
+Right, as someone mentioned before, they do appear to be just shots from the first page of here and Slashdot. What on earth is there that we have to solve? Is there a particular code we can derive from them?
+
+### Lewis the Second | 
+One last thing.
+
+i2 was solved by me (at least I think it was [img:images/smiles/icon_eek.gif] ) the other day, so the PM isn't keeping too close an eye on proceedings by the looks of it...
+
+### tamerlane | 
+Lewis the Second wrote:
+The slice of picture matches up with the sos-dan site, not slashdot [img:images/smiles/icon_wink.gif] .
+
+As far as i2 goes, I dont know if anything is solved yet. Like, we copied out what was in the animated gif... 
+
+ 
+ Spoiler (Rollover to View):
+I have to figure it still means something. Like we've been smashing together every five pixels to form the above picture slices, but its not like it lead to much so far.
+
+### Lewis the Second | 
+sos-dan, pardon, not slashdot.
+
+The first one was solved, though, apparently, by just working out to put them together... this is all very confusing.
+
+I'm still not sure what to make of this game. I like the ambiguity but everything so far seems to have been a bit hit and miss. As if it's luck of the draw if you solve something or not, as opposed to skill.
+
+### guset | 
+Spoiler (Rollover to View):
+
+ 
+ Mercuria wrote:
+No it was an actual login popup, the only thing I did was entering the code as usual. Though there is a chance that it's my browser that just screwed up, because upon closer inspection I noticed that the page has got an actual FTP server (and IRC server) open, sorry.
+
+### Lewis the Second | 
+I've messed about with both 'smashed together' images in photoshop - levels, channel splitting, channel mixing, etc - and nothing stands out.
+
+### tamerlane | 
+Lewis the Second wrote:
+Heh. Me neither. I'm almost looking at it from a perspective of a educational project; "What does it take to get someone on the internet to enter a code every 99 minutes?" If that's the case, he's been stringing us along for a while now using little more than a decrementing counter and some flashy AJAX coding.
+
+### tamerlane | 
+guset wrote:
+
+ 
+
+ 
+ Spoiler (Rollover to View):
+
+### oodoov_ecniv | 
+Spoiler (Rollover to View):
+
+I should hope that this isn't the actual solution to this checkpoint.
+
+And as for i2.gif, I've noticed that the characters are arranged in three rows of 6 and a row of three. And their english sounds purposefully bad.
+
+### tamerlane | 
+oodoov_ecniv wrote:
+
+ 
+
+ 
+ Spoiler (Rollover to View):
+
+Also, I take it I'm not the first to see the correlation between the leftmost decimal number and the "completness" of the grid after entering the code. Like, right now it says about 3.10 and three and one thenth columns are filled in.
+
+### Lewis the Second | 
+I just got the grid up and there are only 2 doors left locked...
+
+### guset | 
+Just entered the code and got two keys (3&4) + the "Are you him ?" and now the "map" has almost vanished, the only thing in the box is 21 horizontal bars on the left side, after going north I entered the code again and 4 keys and the box now contains 24 bars instead, it seems to be filling up kolumn by kolumn from top to bottom.
+
+ 
+ tamerlane wrote:
+Ok, so we got the stats to left=completness(80/n perhaps?), middle=room/location and right=countdown.
+
+Now about those keys and the first question probably needs an answear too?
+
+ 
+ tamerlane wrote:
+
+ 
+
+That's true! Stupid of me to not think about that.
+
+### tamerlane | 
+Lewis the Second wrote:
+It seems like there are two versions of the map (if it is a map; maybe we're playing a distributed version of battleship).
+
+One Map appears after entering the code and "fills up" from left to right (maybe somehow reated to the leftmost number). This is the one that the flashing dot appears on when you have the opportunity to move. Though, it seems to need to be filled in enough to show the dot.
+
+The other version of the Map usually appears in the "filled in" form but lacks the flashing dot. And typically it seems to appear in a random fashion. It doesn't always seem like the two maps are always in sync either...
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+map1.png
+
+ Description
+
+### guset | 
+Yea, I have been trying that out a bit, moved back and forth around room 100.
+
+As far as I can tell, you will always be able to make "your" move on the "broken" board after waiting n minutes (n being around 10) and inputing the 227664 code and the keys is the directions you can move in, counting closed doors as unavaible moves (which is probably why you sometimes will see the map without keys).
+
+The "Are you him ?" text seems to appear after some (valid?) inputs.
+
+I also saw the blinking box once, not sure which board it was on though as I was a little too quick to move on.
+
+### tamerlane | 
+Update-o-rama from progress.txt (now with handy decoder kit)
+
+ 
+ Code:
+
+ 
+ Code:
+i1 concerns a post from InsaneLampshade at sos-dan 
+
+i2 concerns a post from oodoov_ecniv at unfiction 
+
+I'm willing to bet that the"n" means something hasn't been quite solved yet. Hopefully mr. lostme thinks we're at least on the right track.
+
+### blaqueice | 
+and the U stands for unfiction and the S stands for Sos-dan...looks like we are winning?
+
+### tamerlane | 
+blaqueice wrote:
+Heh, I think the answer to that question is: ??MAYBE??
+
+I'm still not sure what the second two columns are. My random-ass-guess is that the "1's" column is a point value, and the "1.0, 2.0, 3.0" shows which phase of the game (if it is a game) we're in. So it is possible that unfiction is currently "winning" with a score of 1-0, where two points are still outstanding
+
+### Domster | 
+Well, ok, here's some information I overlooked about i1.gif (I want my user ID on two of those challenges [img:images/smiles/icon_smile.gif]).
+
+Take a look at the sixth line up from the bottom of the sos-dan part of the gif. Notice anything strange? 'vna' isn't a very common letter combination, is it? So, I looked up the original page, and sure enough 'vna' is probably trying to look like the word 'dynamic': the 'y' has been changed for a 'v'.
+
+Interesting huh? So, then I looked at the one from this thread. Check out the post count! The '5' in 175 has been replaced by an 's'.
+
+I couldn't see any other discrepancies, but there may be.
+
+### Domster | 
+[img:images/smiles/icon_smile.gif]
+
+http://www.xccr.com/images/progress.txt :
+
+ 
+ Code:
+
+### Stevo984 | 
+Anyone else notice that at least on the sos-dan image several letters are not complete? Missing vertical lines, phantom pixels and such...
+
+### Domster | 
+Stevo984 wrote:
+
+If you're looking at the image Lewis posted a page ago, it's because he didn't glue the pieces together properly, and overlooked blaqueice's post on page 4 (which doesn't have the colours inverted back, but at least has the pixels lined up).
+
+Now I just need to get home from work to have a go at the third image - I've got a few ideas. Going for 3 out of 3!
+
+### Lewis the Second | 
+Domster wrote:
+
+If you're looking at the image Lewis posted a page ago, it's because he didn't glue the pieces together properly, and overlooked blaqueice's post on page 4 (which doesn't have the colours inverted back, but at least has the pixels lined up).
+
+Now I just need to get home from work to have a go at the third image - I've got a few ideas. Going for 3 out of 3!
+ 
+
+Yeah I probably should have pointed that out. I accidentally deleted a row of pixels! Sorry for throwing everyone out. [img:images/smiles/icon_redface.gif]
+
+And poo, I actually missed that post.
+
+ [img:images/smiles/afriendlytrout2.gif] s self.
+
+### Stormalong | 
+Good work guys! Esp. Domster. 
+
+I was just looking at i2.gif, which we apparently haven't solved yet. I noticed each letter is exactly 5px wide. Can't be a coincidence.
+
+### oodoov_ecniv | 
+I am pretty much stumped on i2.gif...
+
+All I have are these notes:
+
+There are a total of seven frames in the gif. Each frame contains four rows of characters. Each frame also contains 21 characters, except for one. Frame three only contains 20 visible characters, the last row only containing two characters. Except for that one frame, they are uniform in everything but the characters themselves.
+
+And as for the message, other than the suspiciously bad english, the only thing I can think of would be to remove every fifth letter (shown below). I'm not sure what to make of it, some new words come out along with a lot of gibberish.
+
+ 
+ Spoiler (Rollover to View):
+
+### Rolerbe | 
+oodoov_ecniv wrote:
+
+the message has been extracted by tamerlane here . I didn't see his post, so extracted it myself and got the same results (self [img:images/smiles/afriendlytrout2.gif] ) But I don't think we understand what to do with it yet.
+
+### oodoov_ecniv | 
+Thats what I mean. I know the message, and apparently the PM thought I was on the right track, but I have no idea what to do with this block of text.
+
+### Mercuria | 
+Stormalong wrote:
+
+Hm, but what does it mean by "smash"? is it "destroy", sort of like what oodoov_ecniv was going for? or could it be "combine" in some way? and "each 5 px" could be every 5th one, or every one that is 5 px
+
+### LatentMoths | 
+An observation about the a* files...I'll spoilerize it just in case... 
+
+ 
+ Spoiler (Rollover to View):
+
+### Rolerbe | 
+Spoiler (Rollover to View):
+
+[spec] I think 'broken counts' refers to not letting the counter run down without inputting the key sequence. As for smashing, maybe the keys aren't for moving, but will 'break' a door. I haven't decomped the little images yet, but they appear to be on 5pixel sizes. [/spec]
+
+### guset | 
+ilikepucks wrote:
+
+ 
+
+ 
+ Spoiler (Rollover to View):
+
+Some boring/nonsense things (hosting company):
+
+ 
+ Spoiler (Rollover to View):
+
+### Lewis the Second | 
+Is Nagios OOG?
+
+### gerwen | 
+Brought here by curiosity and google.
+
+Nice work folks. Here's my idea(i don't think it's been mentioned):
+
+ 
+ Spoiler (Rollover to View):
+
+### cgerritsen | 
+RSS feed
+Any ideas about the RSS feed?
+
+Name: ХССГ :: xccr
+
+Feed Location: http://xccr.com/rss_227664.aspx 
+
+Description: Please help push the buttons before the time runs out.
+
+One thing I notice - the rss feed has 227664 in it, the number from the slashdot link that seems to return keys a lot (hasn't been working recently for me).
+
+Also, there is always (that I have looked) one link in the feed, to http://xccr.com/index.aspx with a name that is 4 digits. For example, right now the name is 5661
+
+I feel like that number might be important?
+
+Corey
+
+### wishingiwasgone22 | 
+a quick question, are the numbers on the site the same for every person on it? right now i have 3.00 01001100 96:26 and counting...
+
+### guset | 
+You have to wait 10min between each 227664 insert.
+
+And the 4 digits is the time remaining, in seconds, until the timer reaches zero.
+
+### cgerritsen | 
+leftstatus decreasing
+Also, the 'leftstatus', the decimal in the top left, has been dropping pretty rapidly...I assume becuase a lot of people are entering 227664 and entering that no longer gives keys, just lowers the decimal...
+
+I saw it up at 4.15 and now it is at 3.00
+
+### wishingiwasgone22 | 
+yeah, so its back at 3.05 now....
+
+hmmmmm i added the RSS feed on my firefox bar thingy, it has the number 5917. Any guesses?
+
+### cgerritsen | 
+RSS Feed numbers
+I have been watching the RSS feed...some "titles" from the "articles" in the feed, in sequential order earliest to latest (always only one article in the feed):
+
+5661
+
+5521
+
+5891
+
+5917
+
+I will try to keep writing these down and post in 30 mins or so.
+
+### tamerlane | 
+The RSS feed updates about once every 30 minutes.
+
+The number in the title is how many seconds until the timer reaches zero.
+
+For instance, if the RSS feed pops up 5399, then there is 89:59 left on the timer; 5999 is 99:59, etc... 
+
+If you ever see the RSS < 5000, then someone should probably go enter the code.
+
+[Edit: Whoops, it looks like guset answered this a few posts above]
+
+### wishingiwasgone22 | 
+tamerlane wrote:
+
+im glad there are smart people here at the UF forums [img:images/smiles/icon_smile.gif]
+
+[Edit: its back down to 3.00 again. [img:images/smiles/icon_sad.gif]]
+
+### tamerlane | 
+Re: leftstatus decreasing
+
+ 
+ cgerritsen wrote:
+This morning, foundme posted a comment on slashdot with his "Please stop entering code 2,2,7,6,6,4 [xccr.com]" sig. I'm willing to bet the reason that the counter dropped from around 4.80 to 3.00 is due to a lot of people seeing that and giving it a shot.
+
+Hopefully that might bring a surge of visits to this forum.
+
+### cgerritsen | 
+RSS feed is updating about once every 5 minutes, not once every 30. You just have your feed reader autoupdating every 30 mins. If you manually reload it, you'll see that it updates sooner.
+
+But yes, thank you for clearing up my stupidity, those numbers seem to be related to when someone last entered 227664
+
+### Rolerbe | 
+On Guset's spec (to which I started this reply almost immediately, but got hung up by that pesky thing called 'work') -- maybe the 5px reference just means that the larger broken images (e.g. i0.gif and i1.gif) are just interlaced with 5px wide stripes. This is something we already know, but the PMs don't necessarily know that we know (if you know what I mean [img:images/smiles/icon_smile.gif] )
+
+### tamerlane | 
+cgerritsen wrote:
+Huh. Maybe that changed somewhat recently. When I first started pounding on the RSS a week ago (checking every few minutes), I only saw about two updates an hour.
+
+Anyway, the fact that there is even an RSS feed at all is pretty cool. It is a good way of monitoring if the timer is being neglected.
+
+### wishingiwasgone22 | 
+has anyone though to tell the other forum not to put in the code? with their being two teams, i think that could be another reason for the drop... [img:images/smiles/icon_confused.gif] 
+
+(speaking of work, i gotta get to that, ill check back later and post anything i've learned)
+
+### Rogi Ocnorb | 
+What rules apply to "tengah" to produce a change?
+
+At the moment it is "i" and Google's cache from 5/7 has "L".
+
+Was it truly IP related or just specific to the key entries?
+
+EDIT:
+
+NM: I'm starting to catch on. I've been lost on this one since you guys started and haven't been able to make any real sense of what it was you were doing.
+
+EDIT2:
+
+I wish I could get it to do what it did for me the other night.
+
+My first entry was 14159265 and the 20 "buckets that normally have onlt either keys or digits had image placeholders, in numerous positions throughout the lines (I'd say around 50 of them in total). I'll just keep entering 227664 every 15 minutes for now.
+
+### tamerlane | 
+wishingiwasgone22 wrote:
+The problem isnt the other forum, it is that foundme, the supposed mastermind behind this, posted a link to xccr (and the code) on slashdot, which receives a fairly large amount of traffic.
+
+### guset | 
+cgerritsen wrote:
+Are you sure? I just entered it and I got 2 keys, the map and the number increased.
+
+Maybe the waiting time has just increased or something, because everytime I enter it with a different IP I get at least map + point increase and sometimes keys.
+
+ 
+ readme.txt wrote:
+I wonder if the "server" he is talking about might acctually be xccr.com and there are other similar servers out there. Probably not, but I find the thought interesting.
+
+### Mercuria | 
+It was speculated earlier that it was a position (just use Windows calc to convert to decimal numbers) on that grid, and that the keys can be used to move you north, south east, or west on it. Various postings about the proposed map are on page 2. I've noticed that the RSS for tengah and what shows up on the web are often not in synch, though.
+
+Incidentally, tengah and kiri are center and left in indonesian, so nothing exciting there, since that's the position they show up on the webpage.
+
+BTW, I think I know what ХССГ stands for -- Christian Social Union of Georgia. it's a political party. Thank-you Google! not that that sheds any light on anything.
+
+### Lewis the Second | 
+Okay, a wayward strategy plan:
+
+We break the count.
+
+At the end of the day, the game's hardly launched yet: it can't just end if we get the counter down to zero (I'm talking about the left hand one, which drops every time someone enters the code). I have this distinct feeling that nothing's going to *happen* until the counter is broken. It might actually force the story somewhere?
+
+### tamerlane | 
+Lewis the Second wrote:
+I dont think that's up to us. There are a ton of people entering the code besides us on this forum.
+
+### guset | 
+Lewis the Second wrote:
+There is a problem... It wont get past 3.0 -_-
+
+### apcfreak | 
+Quote:
+
+well, i just entered it and it became, for the first time today i think, 3:04... kool
+
+### tamerlane | 
+guset wrote:
+Remember progress.txt?
+
+Perhaps we've reached some sort of "save point" and now that we're working on the third of the images the decimal counter to the left wont go below 3.00? 
+
+ 
+ Code:
+
+ 
+ Code:
+I do kinda recall it was often in the < 1.00 back before i0 was officially "solved". Maybe this is some sort of way to keep the game going even if more people keep pounding it with the code.
+
+### apcfreak | 
+ummm... but now it is 3:22...... your theory sounds correct, maybe it has started again?
+
+### guset | 
+tamerlane wrote:
+Remember progress.txt?
+
+Perhaps we've reached some sort of "save point" and now that we're working on the third of the images the decimal counter to the left wont go below 3.00?
+ 
+
+True, I didn't think about that! So any ideas about the animation then?
+
+Probably waste of space, but anyway:
+
+[spec(ulations?)]
+
+ 
+ Quote:
+
+One thing I didn't think about imidiatly is that "look past skin deep" means too look beyond the visible, ie see a person for what he is not what he looks like.
+
+If the above is obvious I blame it on english not being my native language [img:images/smiles/icon_smile.gif].
+
+So that line would probably just mean what everyone knows, that there is something hidden in the image.[/spec]
+
+### Mercuria | 
+guset wrote:
+
+One thing I didn't think about imidiatly is that "look past skin deep" means too look beyond the visible, ie see a person for what he is not what he looks like.
+
+If the above is obvious I blame it on english not being my native language [img:images/smiles/icon_smile.gif].
+
+So that line would probably just mean what everyone knows, that there is something hidden in the image.[/spec]
+ 
+
+Actually, it's reading like it was written by someone whose native language isn't english, which between the Cyrillic letters in the title and the indonesian words in the RSS and the registration for the site, shouldn't be surprising... but then again, maybe it means that there is a message embedded in there, and words had to be written around it (such as using "some hint" instead of "a hint" or "some hints", but using a word like "hence" in the second frame, or as you mentioned, the phrase " past skin deep" instead of just "closely").
+
+I also am having a hard time figuring out how anything could be encoded at the pixel level on 7 small images, that only have 2 colors. A rearrangement of letters seems more likely to me -- but it would be hard to tell, unless the pattern was simple and the sequence was plain text. If there's a message embedded within those characters that's even just ROT13 encoded, it would be difficult to pick up on. And, even if there's no message, a complex enough technique could probably render something that came out sensible, but was unintended and just a coincidence that it was there.
+
+### tamerlane | 
+On a different note... did anyone notice that the left number went from around 3.00 to 22.00 in the last 30 minutes?
+
+### apcfreak | 
+wow, jumped 19 numbers.....
+
+what do you do after yopu get a key? i have kinda confused about for quite a while now...
+
+### Domster | 
+Lewis the Second wrote:
+
+This is a bad idea. Why? Because a week and a half ago the counter was at zero (down from about 15 or 16 when I first saw the page) and nothing happens. You can still enter the code when the left hand counter is at zero, and all it does is recycle through the series 0.03, 0.02, 0.01, 0.00, 0.03, 0.02 etc.
+
+### Mercuria | 
+New image! i3 is now available.
+
+plus, 227664 doesn't seem to be resetting the counter anymore.
+
+Also, update on progress.txt:
+
+i0 [1] 1.00 Y 18-May-2006 08:42 U 10364 
+
+i1 [1] 2.00 Y 23-May-2006 01:52 U 10364
+
+i2 [1] 3.00 y 23-May-2006 20:25 U 10497
+
+i3 [1] 0.50 N
+
+holy crap, that's me! Not that I actually figured out the message in i2... unless this is confirmation that there isn't one...I clearly posted too ambiguously.
+
+### Domster | 
+Looks like a partial break (lower case y), which means you're on the money. I think the new image will help us turn that y into a Y. And it seems it's more likely it's a confirmation that there is a message, that it's plain text, and that it can be found by rearranging the letters.
+
+I think it's pretty clear that the PM is a native English speaker (from New Zealand, and check out the slashdot posts), and that the message is cryptic because the letters needed to be carefully arranged.
+
+### Domster | 
+While I can't yet make much sense of i3.gif, the plaintext is almost certainly in English, and a letter in the cyphertext is actually that letter in the plaintext. Here's the frequency analysis:
+
+ 
+ Code:
+
+and here's the standard English frequencies:
+
+ 
+ Code:
+
+So don't waste time ROT13ing or caesering it.
+
+Also of interest is the fact that the code now takes the integer part of the top-left count off the top-left count (not just 1).
+
+### Domster | 
+I just solved i3.gif
+
+It's solved by moving the columns up until the tops of the blue bars match. The message is:
+
+ 
+ Code:
+
+### Stormalong | 
+I solved i2.gif!
+
+Everything we've done so far has dealt with columns (of 5px), so I focused on that.
+
+There are 7 frames, with 6 columns. After many attempts at crazy things my thoughts wandered back to the ever present 227664. So, if you take the 1st column of letters from frame 2, the 2nd column from frame 2, the 3rd column from frame 7 ( and so on...) you get
+
+ 
+ Code:
+
+There is in fact a user named TheCode on slashdot, but there doesn't seem to be anything interesting about him.
+
+On a side note, I think this game has progressed enough that a chat room might be fun, so I've created #xccr on chat-solutions. If you don't have an IRC client handy you can use the unfiction chat applet at http://www.unfiction.com/chat/ to come by and visit!
+
+### tamerlane | 
+Very nice work there, Stormalong & Domster.
+
+Looks like your progress has not gone unnoticed [img:images/smiles/icon_wink.gif] 
+
+ 
+ Code:
+
+### tamerlane | 
+Stormalong wrote:
+Actually, there is also happens to be a user on slashdot called 227664 . In the user info, there is a small snippet of clue:
+
+ 
+ Code:
+
+### tamerlane | 
+Okay. More info before I go to bed concerning:
+
+ 
+ Code:
+
+KB328894 is a Microsoft knowledgbase article concerning the first character of each line being clipped off in a print job.
+
+If you take the first letter of each line of readme.txt you get "tfeyet" which is another valid user on slashdot. So we get dropped another clue in his info:
+
+ 
+ Code:
+So, its possible that tfeyet is the "him" we're looking for somehow...
+
+### tamerlane | 
+Okay, so I got distracted from going to bed...
+
+Just recently a "fan" has been added to the profile of slashdot user 227664 . This user 113389363 has this to say in his profile:
+
+ 
+ Code:
+
+So is there something about i2 still needing solving yet?
+
+### oodoov_ecniv | 
+EDIT: tamerlane beat me to it...
+
+EDIT: The part about finding his buddy kind of set me off. After a quick google, "113389363" is a prime number. So I initially thought that the 'buddy' had something to do with the number 1. None of the users I found had any relation to the game that I could see.
+
+### Lewis the Second | 
+See while us UK folk are asleep, EVERYONE SOLVES EVERYTHING! [img:images/smiles/icon_lol.gif] 
+
+Good work, fellas.
+
+### Domster | 
+I thought that the buddy of a prime number would be its twin - of course, 113389363 isn't a twin prime. It's not a cousin prime either. It is, however, not just a sexy prime, but a double sexy prime!
+
+http://en.wikipedia.org/wiki/Sexy_prime 
+
+The sequence is 113389357, 113389363, 113389369. Users don't exist for the other two numbers on slashdot, so it's of questionable merit. I also checked, and none of the numbers seem to be factors of the others.
+
+### guste | 
+tamerlane wrote:
+
+So is there something about i2 still needing solving yet?
+ 
+
+[spec]
+
+Acctually he's been on his fans list for quite a while.
+
+If you look at the progress.txt you can see that 0.5 points was deducted from i2 too i3, this is most probably because that nobody solved the i2 pic before i3.
+
+So as it says, he isn't happy because the time it took and it says bypass which probably means that there is/was some other way to find this user and indirectly find user 227664 that way instead, he's on his friend(buddy) list.[/spec]
+
+### Domster | 
+i3 has just disappeared from the page.
+
+### Mercuria | 
+I tried typing tfeyet's slashdot UID when I got a "Are you him?", but it didn't do anything.
+
+### wishingiwasgone22 | 
+so we have solved all four of the puzzles so far, when will we be contacted and given our reward? the PM should give us a visit in the IRC chat #xccr.
+
+### Mercuria | 
+We still have at least one puzzle on our plate:
+
+ 
+ Code:
+
+### Rogi Ocnorb | 
+Things it isn't:
+
+A Hex, Octal or Decimal representation of characters
+
+A phone number (Nothing in the Country Codes or IDD/NDD prefixes)
+
+An IP Addrerss
+
+A number sequence that I can see.
+
+Could be:
+
+"PXAUKL" using A=01, B=02 on a rotation.
+
+Factors: 2 2 126001 838091
+
+Square of 649924
+
+### wishingiwasgone22 | 
+i googled PXAUKL and a posting from a site called seriousstyle.org came up, its in some other language that i couldnt figure out.
+
+heres the URL, someone should give it a go... 
+
+www.seriousstyle.org/new-3607936-440.html 
+
+[Edit: Google says its german, but i cant get a translation.]
+
+### Zor | 
+I just got home from work, typed in 227664, and then 974444, and I got something. I took a screenshot and attached it.
+
+I cant really prove it though, since that webpage now redirects to http://www.xccr.com/toolate.aspx. But I got us points! 0 points, but hey, it's something different. [img:images/smiles/icon_smile.gif]
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+points.jpg
+
+ Description
+
+### LatentMoths | 
+I just got that to work also using the same two numbers...I didn't claim the points because it mentioned a prize pool and I think we could do better than 0 points, but yippee for something new.
+
+### tamerlane | 
+Zor wrote:
+Nice work! Now, if we can only find the meaning behind:
+
+ 
+ Code:
+
+### Stormalong | 
+Zor: cool!
+
+Frankly, I'm tempted to claim the points, even though its at 0, just to see what happens.
+
+### oodoov_ecniv | 
+Okay, great, we've found something that works, completely by accident apparently. Now we should figure out why it works, as I would assume that the PM wants us to solve each puzzle.
+
+### tamerlane | 
+xccr was acting a little wierd, so i checked in the images dir.... i4.gif
+
+it is a sideways image seemingly displaying
+
+ 
+ Code:
+
+/./~ seems to be indicating "slashdot.org/~" which is the prefix for user pages
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+i4.gif
+
+ Description
+
+### oodoov_ecniv | 
+Upon close inspection, the characters are separated into groups. A 'group' has all it's characters adjacent to the next. But there are 1 pixel wide breaks bewteen certain characters. I'll attach an illustration.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+i4_illust.gif
+
+ Description
+
+### tamerlane | 
+In the event we're following the speculation that this is another slashdot username, be aware that they are limited to 20 chars in length.
+
+### apcfreak | 
+for some reason, xccr.com is not working for me, brings a 504 gateway timeout
+
+EDIT: it works fine now.... must of been my dial-up....lol
+
+### Domster | 
+oodoov_ecniv wrote:
+
+I don't think this is anthing to be particularly concerned about. Check out the capital I in i2 and i3 - it's always had a 1px gap on either side and it seems that lower-case 'z', 'h', 'x' and 'y' are 4px wide. Seems pretty consistant to me.
+
+### Mercuria | 
+check out this, from the HTML source for the main page:
+
+ 
+ Code:
+
+This difference between that and i4 is just the numbers, and the +.
+
+btw, the "kiri" number is at its lowest that I've ever seen - .09. oh wait, it just went up to .13
+
+http://slashdot.org/~3389363/ is a user, with an xccr link for a webpage, but no other clues. I don't know what the deal with the 11+ might be.
+
+### tamerlane | 
+Mercuria wrote:
+http://slashdot.org/~113389363/ is also a valid user we discovered a day or so ago. Supposedly he was there to help us move past problems decoding i2.
+
+### guset | 
+Mercuria wrote:
+
+This difference between that and i4 is just the numbers, and the +.
+ 
+
+I knew I had seen that string from somewhere -_-.
+
+I believe that he probably just wanted to show the way in which to find mr. 113389363 and 3389363 is just a decoy. Though the problem with this is that string has, as far as I've noticed, been there from the beginning. Which means that there should be something more with this, maybe.
+
+Also, the score for this image is 0.5, which would mean it's something similiar to i3, an extra unplanned hint.
+
+Feels like there is way too many ways to look at this, too random.
+
+Also what about that "v" and "s" in i1? If that is supposed to mean "versus", then the "missions" so far is i0=Find the other "team", i1=competition?, i2&i3&i4=Find mr. 227664 too find tfeyet.
+
+### apcfreak | 
+well, according to this,
+
+ 
+ Code:
+
+You solved it! Good job...
+
+### Mercuria | 
+not that it gave us any new clues...of course, it was just a .5 pointer.
+
+So, here's what we do know. "Him" is tfeyet, and his UID (974444) is "the answer". We've cracked each of the 5 images we've been presented so far -- the first two were to let us know we're competing against the sos-dan board (although they haven't really been keeping up...), and the next three were to lead us to tfeyet, although in theory we should have been able to do it with just the third one. The fifth one also seems to have some additional meaning that we haven't cracked yet, having something to do with the string dDwyMDY1NTIwNzM1Ozs+mUPIfvct33x8rGnrbRqh93b6J3Q. 
+
+Here's what we're pretty sure of, but we haven't gotten confirmation on yet. first, those 5x5px images that get displayed are a map. the gaps in them are the "doors" referred to in readme.txt. the tengah number indicates our position. After entering the code 227664, we have the opportunity to move, using the directions. Also, the PM(s) are using slashdot accounts for a lot, and we may not have found them all yet. http://slashdot.org/~dDwyMDYNTIwNzMOzsmUP/ is another one, telling us to "be more creative".
+
+Here's what we don't know. what does this map have to do with the search for tfeyet? what does that string actually mean? and what is the kiri number? we've seen it suddenly jump over 20, drop to under 1, and while it seems to change in response to entering the code, and possibly a key number to "move" in the map, we don't have that relationship nailed down 100%. Also, "What about 422401216364?" 
+
+Finally, some wilder questions: does the name xccr or the cyrillic characters in the title mean anything? how about the numbers that show up whenever you enter the code? or are these things just red herrings?
+
+### guset | 
+apcfreak_666 wrote:
+
+You solved it! Good job...
+ 
+
+Well... I guess I finally did something right, thanks.
+
+I must say, great job so far you all. I should had said it earlier though...
+
+Nice summary Mercuria. About http://slashdot.org/~dDwyMDYNTIwNzMOzsmUP/ I think he's just another decoy like 3389363, as they seemingly was created at the same time, along with 113389363.
+
+One thing I find strange is that the readme says that he's gonna contact whomever gets past the checkpoint, which he hasn't done yet?
+
+I was thinking that q1.gif was the first checkpoint, but if tfeyet is "him" then apparantly not. True that the i#.gif can be seen as checkpoints, but then what about those who wasn't supposed to be?
+
+Either way, I would think that "What about 422401216364?"=q2
+
+And about the map, it seems like he reset it, as there was just one single open "door" just this moment and the broken one was barely there.
+
+And that "kiri" number seems to be related to the completness of the broken map, as Tamerlane stated somewhere earlier.
+
+Oh and another thing, it seems that 227664 was created "long" after tfeyet, unless there was a large amount of people registering at that moment. As their UIDs are 975093 and 974444, respectively, which could mean there is/was some way to find him directly or he just took a break.
+
+### apcfreak | 
+well, i4 is off the home page now.... so i wonder if another one is coming?
+
+it better be....
+
+### oodoov_ecniv | 
+This probably has nothing to do with the game, but I was playing Half-Life 2 this morning and guess what I found:
+
+NOTE: It was in the courtyard in the beginning of the game. And exuse the sub-awesome graphics, but my laptop isn't quite the best out there.
+
+[img:templates/unfiction2010/images/spacer.gif]
+
+xccr.jpg
+
+ Description
+
+### tamerlane | 
+guset wrote:
+On slashdot there are something between 1200-2000 new registrations per week. The fact that the userIDs differ by 650 or so means they were probably created within 72 hours of each other (likely sooner).
+
+### apcfreak | 
+oodoov_ecniv wrote:
+
+nice catch, but can it really be a coinecidence? i never catched that....
+
+(P.S. sorry for spelling....)
+
+EDIT: the "r" is the same "type" as xccr ing the title.... the Cyrillic capital letter Ghe
+
+### Mercuria | 
+well, I hate to suggest it, but we could just brute-force our way through slashdot id's, e.g. http://slashdot.org/users.pl?uid=897346 .
+
+### tamerlane | 
+Mercuria wrote:
+Heh... way ahead of you... i'm slowly working backward through the UIDs (got a crappy connection).
+
+The only UID of interest in the 970000-977189 userspace that we didn't already know about is http://slashdot.org/~338933/ 
+
+Personally, I'm taking advantage zoo.pl, which generates a page about half the size of users.pl. It would take a damn long time to go significantly further back, so I'll probably quit for now.
+
+### tamerlane | 
+Speaking of /. stuff, there's been a change in tfeyet's profile:
+
+Was:
+
+ 
+ Code:
+Is now:
+
+ 
+ Code:
+
+### apcfreak | 
+well, "42 24 01 21 63 64" is not hex, unless "B$!cd" means anything to anyone, and "dDwyMDY1NTIwNzM1Ozs+mUPIfvct33x8rGnrbRqh93b6J3Q=" does not mean anything to me in Base64 encoding, i will keep trying with other ways, hopefully with luck...
+
+EDIT: Not sure if i am on to anything, but i found that "/./~dDwyMDYNTIwNzMOzsmUPIfvctxrGnrbRqhbJQ" translates into Base64 encoding "Ly4vfmREd3lNRFlOVEl3TnpNT3pzbVVQSWZ2Y3R4ckducmJScWhiSlE=" lol if this is nothing, but it may have some words there? maybe not?
+
+### massive | 
+Well, the big string (dDwyMDY1NTIwNzM1Ozs+mUPIfvct33x8rGnrbRqh93b6J3Q=) doesn't necessarily translate ENTIRELY using Base64, but it does have a string of ten numbers in the middle of it ...
+
+t<2065520735;;>�C�~�-�||�i�m��v�'t
+
+206 is a general-purpose area code in Washington state.
+
+### blaqueice | 
+Quote:
+
+I believe he is refferring to that page some people have found (where you enter your email and where you would like to direct the points). So far people have only found it with the option to transfer 0 points...some how we need to get "more than 0"
+
+### smiley_face.gif | 
+tamerlane wrote:
+
+ 
+
+I guess tomorrow it's time for 666?
+
+### guset | 
+So there is an update to the progress.txt now.
+
+ 
+ Quote:
+
+Probably reffering to the q1.gif 
+
+And the "date" of the update is 06-Jun-2006 06:06
+
+Any thoughts about this or have you given up?
+
+Oh, I'm kinda banned from Slashdot so I can't check there [img:images/smiles/icon_redface.gif]
+
+### Stormalong | 
+I just checked tfeyet and he seems to have changed again.
+
+ 
+ Quote:
+
+So the PM is beating us over the head with this "Are you him" thing, but honestly, I have no idea where to go with it.
+
+### guestagain | 
+slight change
+I don't know if anyone else noticed this, but sometime between May 26 and roughly June 1, the field where we input numbers stopped processing a leading 0. You can enter it in just fine, but it doesn't show in the running list of failures. I.e., try entering 0, and press Enter. Or 01. Or 002. Or... 0227664.
+
+Note that this doesn't do anything useful so far, but it is different behavior from a few weeks ago. I remember entering eight-digit binary numbers with leading zeros, and they always appeared in the running list of attempted numbers (leading zeros intact).
+
+### tamerlane | 
+Re: slight change
+
+ 
+ guestagain wrote:
+Yeah, I saw that too. I agree that there have been some behind-the-scenes changes in the last few weeks, because I can no longer get it to do things like display a 12-digit number (or a "number" with letters in it) by manipulating the POST data.
+
+### ShinyEmma | 
+a wee bit off topic...
+I'm pretty sure this is lost-related. Other than a couple of other (previously mentioned) references, one of the frames of i2.gif mentions 'outback adventures' which i think is another lost reference.
+
+### Satyr | 
+tamerlane wrote:
+
+ 
+
+Just punched the code as 2 seperate entries. Got a "Are you him" msg.
+
+I should have tried a "Y-E-S" (594553) on that [img:images/smiles/icon_wink.gif]
+
+### Domster | 
+Re: a wee bit off topic...
+
+ 
+ ShinyEmma wrote:
+
+Does it really? I think you're getting confused and the actual text of that frame is:
+
+ 
+ Code:
+Forming the text 'without broken counts'. Unless you think it's taking about 'Outbrok Encounts' [img:images/smiles/icon_smile.gif]
+
+### wildoats (registering!) | 
+Regarding the number 422401216364, entering the first half (422401) returns a full box. The last half does nothing, but maybe I need to wait ten minutes.
+
+### ARGnewblet | 
+Tried the 'yes' answer
+Hello, all, I'm a first time poster, I've been lurking for about a day. I must say, all of this ARG business is quite intriguing. Anyhow, I tried answering 593544 to the "are you him?" response, and nothing happened. I don't know what to make of that other than that that route is a dead end, but perhaps you good people can come up with something else following that line of thought. Here's to a victory! [img:images/smiles/coffee.gif]
+
+### Zam | 
+My brain hurts 0
+Just a note, the string dDwyMDY1NTIwNzM1Ozs+mUPIfvct33x8rGnrbRqh93b6J3Q=
+
+appears in the source of the site, I don't know if anyone noticed..
+
+<input type="hidden" name="__VIEWSTATE" value="dDwyMDY1NTIwNzM1Ozs+mUPIfvct33x8rGnrbRqh93b6J3Q=" />
+
+### Zamo | 
+I found sumthing
+Well, 422401216364 can be the IP adress: 
+
+ 
+ Spoiler (Rollover to View):
+ written in longip form.
+
+Unfortunately, it doesn't lead to anything.
+
+OrgName: RIPE Network Coordination Centre 
+
+OrgID: RIPE
+
+Address: P.O. Box 10096
+
+City: Amsterdam
+
+StateProv: 
+
+PostalCode: 1001EB
+
+Country: NL
+
+ReferralServer: whois://whois.ripe.net:43 
+
+NetRange: 89.0.0.0 - 89.255.255.255 
+
+CIDR: 89.0.0.0/8 
+
+NetName: 89-RIPE
+
+NetHandle: NET-89-0-0-0-1
+
+Parent: 
+
+NetType: Allocated to RIPE NCC
+
+NameServer: NS-PRI.RIPE.NET
+
+NameServer: SEC1.APNIC.NET
+
+NameServer: SEC3.APNIC.NET
+
+NameServer: SUNIC.SUNET.SE
+
+NameServer: TINNIE.ARIN.NET
+
+NameServer: NS.LACNIC.NET
+
+Comment: These addresses have been further assigned to users in
+
+Comment: the RIPE NCC region. Contact information can be found in
+
+Comment: the RIPE database at http://www.ripe.net/whois 
+
+RegDate: 2005-06-30
+
+Updated: 2005-07-22
+
+ 
+ Spoiler (Rollover to View):
+
+### asahel14 | 
+More research
+I currently did some more research on the images on the "i" directory. Not a real file, just the root of the word..
+
+Here is what I posted in the eon8crack.tk forums..
+
+ 
+ Quote:
+
+I couldn't copy it, because it was really weird. Some weird coding, really.
+
+The i1 image, I decrypted it and it turned out like this...
+
+http://img413.imageshack.us/my.php?image=i0i1decrypted2di.gif 
+
+Also, the i2 image, I decrypted SOME of it, so here it is..
+
+http://img431.imageshack.us/my.php?image=i2imgdecrypted3ja.png 
+
+Another i2img decrypted, but a single line of it....
+
+http://img431.imageshack.us/my.php?image=i2imgdecrypted22iy.png 
+
+Will research more later..
+
+ 
+
+I hope this helps you.
+
+### Execvator | 
+Summary
+Ok, a little summarize [img:images/smiles/icon_biggrin.gif]
+
+Note: There is a big chance that I have missed alot!
+
+SPOILERS! Just so you know [img:images/smiles/icon_smile.gif]
+
+ 
+ Quote:
+
+### ero | 
+Has anyone here checked the favicon?
+
+There's a second layer with a strange picture in it.
+
+http://xccr.com/favicon.ico
+
+### Meth | 
+Just a thought, but has anyone tried typing in (974444) (tfeyet)'s UID when they get the Are You Him? question?
+
+### makomk | 
+Meth wrote:
+
+Just tried it. No noticeable effect... 
+
+(Interesting - whatever you type at the "Are you him?" message shows up in the list of numbers at the bottom when it goes away...)
+
+### arbitrary | 
+http://xccr.com/index.aspx 
+
+ [img:images/smiles/icon_eek.gif] There seems to have been a major update on the site... no idea what it means though
+
+http://xccr.com/images/x1.gif
+
+### Lola_66 | 
+Yippe! This game was driving me crazy. Try clicking on an uncolored box. you get to "register" for the space. I did, and am waiting for an email..
+
+### GuyIncognito | 
+Yay! It's cool to have this moving again...it really bothered me to just scratch this one off!
+
+I also applied for ownership of a bunker...with the team-based play this seemed to call for in the past, maybe we have to register enough bunkers to spell something out (replicate the x1.gif image)?
+
+Just got an email from xccr.com with the code for my bunker. Don't be too hasty about changing the properties of your bunker, though. I just changed mine and now I can't manipulate it anymore... [img:images/smiles/icon_confused.gif] This probably needs more of a coordinated effort again.
+
+Also, apparently you can only apply for one bunker in a given timeframe. I tried to register a few more and it replied with a plain "Patience." on the registration screen.
+
+### desertilluminati | 
+um... after registering a bunker and changing the colours, i too am unable to move any further....oops. value is at 10.01
+
+what's with the "helper bunker" 
+
+?
+
+oh, and hey! guess it was time to quit lurking and wave.
+
+### k.a.n.d.i | 
+there was some apparent gibberish in the source on a bunker page that translated to this in base64
+
+ 
+ Spoiler (Rollover to View):
+
+### desertilluminati | 
+so, i'm in bunker 231. 
+
+and in 252.
+
+there was the option "helper bunker" when i checked back just now, and so i input my code again, and selected 231 to help.
+
+it changed the value of each bunker+/- one.
+
+just another bit of useless information.
+
+^_^
+
+the option to help is gone from 252 now, but i can use 231 to help someone else looks like.
+
+### InsaneFox | 
+I have registered a bunker, and mine is not flashing, although everyone elses is.... hmm. I also changed nothing, and cannot change anything now it seems.
+
+### Sarojin | 
+Interesting, I may join you on this one guys [img:images/smiles/icon_smile.gif]
+
+Edit: How do I enter the code? @_@
+
+Edit2: Nevermind
+
+### Ruuku | 
+Wow, XCCR update [img:images/smiles/icon_eek.gif] , schweet, all help bunker 148! [img:images/smiles/icon_smile.gif]
+
+### InsaneFox | 
+Alright, hopefully noone gets upset at me, but I took the liberty of inputting 227664 in everyones hatch. Thats where helper bunker comes in. You choose your bunker number when you input 'the code' for someone elses bunker. Also, it seems the code needs to be put in some time between 6 and 12 hours. *hides from the angry people who wanted to put their own codes in*
+
+### Ruuku | 
+ruuku wrote:
+
+Stop taking mine over, you're decreasing the Value! O_o;;;
+
+### Fayul | 
+It seems fairly obvious that we should be trying to recreate 1.gif...at least, that's how I see it.
+
+### Cooldrew | 
+Alright, I'm registering #17.
+
+Should we have an IRC channel now, for organizing "helpers" and times to input the code? Just seemed like a good idea.
+
+Oh, and I've been following this one for a while, but now seems like a good time to join in [img:images/smiles/icon_biggrin.gif]
+
+### Domster | 
+The number of 'pending' bunkers is pretty annoying. I can sort of see the colour bands emerging now - seems enough people know what we're aiming to do. I'm up to 10.60 myself.
+
+### Domster | 
+Dead. 
+
+Two years later, and the page seems to have reverted back to its initial state. 227664 still seems to have something to do with it. I'd like to contact the puppet-master somehow, just for the sake of my curiosity, seeing as he seems to be a New Zealander, possibly.

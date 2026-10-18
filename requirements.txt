@@ -1,0 +1,6 @@
+# xccr_probe.py uses only the Python standard library.
+# The two render scripts additionally use:
+pillow>=10
+numpy>=1.24
+# and Playwright (for render_infographic.py only):
+playwright>=1.40
