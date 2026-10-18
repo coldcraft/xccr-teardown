@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xccr.com teardown</title>
+<meta name="description" content="Reverse-engineering xccr.com, a 22-year-old ARG. Interactive teardown: mechanics, authorship, a reconstructed state model, a live experiment, and the data.">
+<meta property="og:title" content="xccr.com — teardown of a 22-year-old ARG">
+<meta property="og:description" content="Not Half-Life, not unsolved — abandoned. The full teardown, with live data.">
+<style>
+:root{--bg:#0a0e0a;--panel:#0f140f;--line:#1c261c;--ink:#cfe8cf;--dim:#6f8a6f;--grn:#3fdc5c;--grn2:#2a9d3f;--amb:#f0a33e;--mono:ui-monospace,"Cascadia Code",Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--mono);overflow-x:hidden}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:99;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.18) 3px);mix-blend-mode:multiply;opacity:.5}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+a{color:var(--grn);text-decoration:none;border-bottom:1px dotted var(--grn2)}a:hover{background:var(--grn);color:#000}
+h1,h2{font-weight:700;letter-spacing:.5px}
+section{padding:54px 0;border-top:1px solid var(--line)}
+section h2{color:var(--grn);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin:0 0 22px;display:flex;align-items:center;gap:10px}
+section h2::before{content:"//";color:var(--grn2)}
+.lead{color:var(--dim)}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;border-top:none}
+.hgl{font-size:clamp(34px,8vw,76px);line-height:1;margin:0;color:var(--grn);text-shadow:0 0 18px rgba(63,220,92,.35)}
+.hgl .ru{color:var(--ink);opacity:.85}
+.tag{color:var(--dim);margin:14px 0 30px;font-size:clamp(14px,2.4vw,19px)}
+.term{background:#000;border:1px solid var(--line);border-radius:8px;max-width:560px;box-shadow:0 0 40px rgba(63,220,92,.08)}
+.term .bar{background:#0d120d;border-bottom:1px solid var(--line);padding:7px 12px;font-size:12px;color:var(--dim);display:flex;gap:7px;align-items:center}
+.dot{width:10px;height:10px;border-radius:50%}
+.term .body{padding:20px;min-height:120px}
+.prompt{color:var(--grn);font-size:30px;letter-spacing:2px}
+.cursor{display:inline-block;width:14px;height:26px;background:var(--grn);vertical-align:-4px;animation:blink 1s steps(1) infinite;margin-left:3px}
+@keyframes blink{50%{opacity:0}}
+.timer{color:var(--amb);font-size:15px;margin-top:14px;min-height:20px}
+.hint{color:var(--dim);font-size:13px;margin-top:10px}
+.scrolldn{color:var(--dim);font-size:12px;margin-top:40px;letter-spacing:2px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px;font-size:13px}
+.chip b{color:var(--amb)}
+.tl{display:grid;gap:0}
+.ev{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.ev .yr{color:var(--grn);font-weight:700}
+.ev.dead .yr{color:var(--dim)}
+.ev.now .yr{color:var(--amb)}
+.ev p{margin:0;color:var(--ink)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+#chart{width:100%;height:auto;display:block}
+.ttip{position:fixed;pointer-events:none;background:#000;border:1px solid var(--grn2);padding:6px 9px;font-size:12px;border-radius:5px;opacity:0;transition:opacity .1s;z-index:50;white-space:nowrap}
+.note{color:var(--dim);font-size:13px;margin-top:10px}
+.qrwrap{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+#qr{image-rendering:pixelated;border:1px solid var(--line);background:#fff;flex:0 0 auto;cursor:crosshair}
+.qrinfo{flex:1;min-width:240px}
+.kv{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 0;font-size:14px}
+.kv b{color:var(--grn)}
+.buf{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.cell{width:30px;height:38px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:18px;background:var(--panel);color:var(--dim)}
+.cell.set{color:var(--grn);border-color:var(--grn2);background:#0d1a0d;text-shadow:0 0 10px rgba(63,220,92,.5)}
+.cell.next{border-color:var(--amb);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{background:#1a140a}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}.ev{grid-template-columns:70px 1fr;gap:12px}}
+.big{font-size:40px;color:var(--grn);line-height:1.1}
+.foot{color:var(--dim);font-size:13px;padding:40px 0 70px;text-align:center}
+.btn{display:inline-block;border:1px solid var(--grn2);padding:10px 18px;border-radius:6px;color:var(--grn);margin:4px 6px 4px 0}
+.btn:hover{background:var(--grn);color:#000}
+</style></head>
+<body><div class="scan"></div>
+
+<header class="hero"><div class="wrap">
+  <h1 class="hgl"><span class="ru">&#1061;&#1057;&#1057;&#1043;</span> :: xccr.com</h1>
+  <div class="tag">A 22-year-old internet puzzle, taken apart. Not Half-Life. Not unsolved. Abandoned.</div>
+  <div class="term" id="term">
+    <div class="bar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span><span>&#1061;&#1057;&#1057;&#1043; :: xccr</span></div>
+    <div class="body"><div><span class="prompt">&gt;:</span><span id="typed" class="prompt"></span><span class="cursor"></span></div>
+      <div class="timer" id="t"></div><div class="hint" id="h">click here, then type 227664 and press Enter &mdash; exactly like the real site</div></div>
+  </div>
+  <div class="scrolldn">&darr; scroll: here's what it actually is</div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>The verdict</h2>
+  <p class="lead">Type <b style="color:var(--grn)">227664</b> into <a href="https://xccr.com" target="_blank" rel="noopener">xccr.com</a> and a 100-minute server timer starts. That's the whole hook that has kept people guessing since 2004. Here is the short version, each claim backed by data below and in the <a href="https://github.com/coldcraft/xccr-teardown">repo</a>.</p>
+  <div class="chips">
+    <span class="chip"><b>Who:</b> a hobbyist in Batu Pahat, Malaysia, living in New Zealand</span>
+    <span class="chip"><b>Not</b> Half-Life 2</span>
+    <span class="chip"><b>Not</b> The Lost Experience</span>
+    <span class="chip"><b>2006 puzzle:</b> solved</span>
+    <span class="chip"><b>Modern version:</b> abandoned (dead cron, Sep 2024)</span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Three eras</h2>
+  <div class="tl">
+    <div class="ev"><div class="yr">2004</div><p>Domain registered 18 Nov; the GIF glyphs are dated 17 Nov. WHOIS: Batu Pahat, Johor; contact at palmy.net.nz. Half-Life 2 shipped two days before &mdash; the name came from the game, not the other way around.</p></div>
+    <div class="ev"><div class="yr">May 2006</div><p>A Slashdot signature leaks the code 227664. The Unfiction forum solves a week-long chain of steganographic GIFs (<code>i0</code>&ndash;<code>i4</code>), reaching the message &ldquo;HE IS THE CODE ON SLASHDOT&rdquo; and the checkpoint: enter 227664, then 974444.</p></div>
+    <div class="ev"><div class="yr">2006&ndash;07</div><p>The site becomes a grid of 252 &ldquo;bunkers&rdquo; you apply for by email. The target image spells <b style="color:var(--grn)">HELLO! 227664</b> in a pixel font &mdash; decoded here for the first time (see below).</p></div>
+    <div class="ev dead"><div class="yr">2008&ndash;21</div><p>The ASP.NET app rots: dead timer, then a runtime error for years. A 2008 forum post just reads: &ldquo;Dead.&rdquo;</p></div>
+    <div class="ev"><div class="yr">Jan 2022</div><p>A from-scratch PHP rebuild. A hidden line <code>balance / goal = B1a</code>, a Bitcoin and a Dogecoin address in the page head, the 100-minute timer. This is the live site.</p></div>
+    <div class="ev now"><div class="yr">Oct 2026</div><p>This teardown: the state model reconstructed, a deposit sent to test it, the key-buffer mechanic found, the QR proven unrecoverable.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>The hidden counter &mdash; 75 archived homepages</h2>
+  <div class="card"><svg id="chart" viewBox="0 0 900 340"></svg></div>
+  <p class="note">Every counter value ends in <b style="color:var(--amb)">&hellip;82</b> (the wallet's 34,682 sat plus 300-sat hourly steps). The goal ends in <b style="color:var(--amb)">&hellip;64</b>. The timer alone can never land on it &mdash; a deposit is structurally required. The counter rises ~300 sat/hour while the timer is alive, decays when it isn't, floors at the wallet balance, and has not moved since Sep 2024. Hover the points.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>The experiment: we put money in</h2>
+  <div class="grid2">
+    <div class="card"><div class="big">15,382 sat</div><p class="note">Exactly the gap to the goal (~$12.50), sent to the doorB address on 2026-10-17. <a href="https://mempool.space/tx/43da77fcd4911557629f389d1872d623e8ef1365e6d762286a36e5b14d308ae7" target="_blank" rel="noopener">Confirmed on-chain</a>. Then the timer was held alive for 24 h and the page snapshotted every 10 min.</p></div>
+    <div class="card"><div class="big" style="color:var(--amb)">no change</div><p class="note">The Wayback series explains why: in the B1a phase the wallet held 34,682 sat for 11 months while the counter read 0. The B1b floor equals the balance <i>at the moment of the 2023 slot transition</i>. <b style="color:var(--grn)">The wallet is read once, when the author manually starts a slot &mdash; not live.</b> A clean negative result.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>The keys spell a word, one letter per solved slot</h2>
+  <p class="lead">The four <code>keyB</code> rows are a 52-character buffer. Solving the first slot (B1a) overwrote position 1 from <code>a</code> to <code>D</code>. Each future slot overwrites the next character. Read in order, they spell a message. We have one letter.</p>
+  <div class="buf" id="buf"></div>
+  <p class="note">Green = revealed, amber = the slot currently in play (frozen), grey = locked. The &ldquo;wallet address&rdquo; is doubling as the buffer being overwritten &mdash; a mechanic undocumented anywhere else in 20 years.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>The QR code: real, cropped on purpose, unrecoverable</h2>
+  <div class="qrwrap">
+    <canvas id="qr" width="320" height="340"></canvas>
+    <div class="qrinfo">
+      <div class="kv"><span>format info</span><b>valid</b></div>
+      <div class="kv"><span>error correction</span><b>H (highest)</b></div>
+      <div class="kv"><span>mask pattern</span><b>6</b></div>
+      <div class="kv"><span>captured</span><b>~1/3 of symbol</b></div>
+      <div class="kv"><span>verdict</span><b style="color:var(--amb)">unrecoverable</b></div>
+      <p class="note" id="qmsg">The format bits decode cleanly, so this is a genuine QR the author cropped to the top-left. But QR data is written bottom-right &rarr; up, so the message header sits in the <i>missing</i> corner; what's here is the padding tail. ECC-H corrects &le;22 erased blocks; ~2&times; that is missing. An information wall, not a tooling gap. Hover modules.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Everything's in the open</h2>
+  <p class="lead">One stdlib-Python monitor, append-only JSONL state, 85 archived homepages, the full 2006 forum thread, the decoded images. Check every claim.</p>
+  <a class="btn" href="https://github.com/coldcraft/xccr-teardown">&#9733; the repo &amp; data</a>
+  <a class="btn" href="https://github.com/coldcraft/xccr-teardown/blob/main/FINDINGS.md">the full dossier</a>
+  <a class="btn" href="https://github.com/coldcraft/xccr-teardown/blob/main/xccr_probe.py">xccr_probe.py</a>
+  <a class="btn" href="https://xccr.com" target="_blank" rel="noopener">the live site</a>
+</div></section>
+
+<div class="foot">Findings CC&nbsp;BY&nbsp;4.0 &middot; code MIT &middot; built from the Internet Archive, the 2006 Unfiction thread, Slashdot, mempool.space, RDAP/APNIC.<br>This page is served by GitHub Pages straight from the repo.</div>
+
+<div class="ttip" id="tt"></div>
+<script>
+const typed=document.getElementById('typed'),tEl=document.getElementById('t'),hEl=document.getElementById('h'),term=document.getElementById('term');
+let buf="";let armed=false;
+term.addEventListener('click',()=>{armed=true;hEl.textContent="console active — type 227664";});
+addEventListener('keydown',e=>{
+  if(!armed)return;
+  if(e.key==='Enter'){
+    if(buf==='227664'){startTimer();hEl.textContent="server timer started. (on the real site, this is all it does.)";}
+    else{tEl.textContent="";hEl.textContent=buf?("“"+buf+"” → l.php returns 2 bytes. nothing."):"type 227664 first";}
+    buf="";typed.textContent="";return;
+  }
+  if(e.key==='Backspace'){buf=buf.slice(0,-1);}
+  else if(/^[0-9]$/.test(e.key)&&buf.length<8){buf+=e.key;}
+  typed.textContent=buf;e.preventDefault();
+});
+let ti;function startTimer(){clearInterval(ti);let s=6000;ti=setInterval(()=>{s--;if(s<0){clearInterval(ti);tEl.textContent="00:00 — reload — and nothing has changed.";return;}
+  const m=String(Math.floor(s/60)).padStart(2,'0'),ss=String(s%60).padStart(2,'0');tEl.textContent=m+":"+ss+"  ▸ 100-minute countdown (sped up here)";},18);}
+
+const tt=document.getElementById('tt');
+fetch('site_data.json').then(r=>r.json()).then(D=>{
+  /* chart */
+  const svg=document.getElementById('chart'),W=900,H=340,L=78,R=24,T=20,B=38;
+  const pts=D.series,goal=D.goal;
+  const d0=new Date(2022,0,1),d1=new Date(2026,10,1);
+  const dt=s=>new Date(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6,8));
+  const X=s=>L+(dt(s)-d0)/(d1-d0)*(W-L-R);
+  const Y=v=>T+(H-T-B)*(1-v/0.0024);
+  let el='';
+  for(let y=2022;y<=2026;y++){const x=X(y+'0101');el+='<line x1="'+x+'" y1="'+T+'" x2="'+x+'" y2="'+(H-B)+'" stroke="#1c261c"/><text x="'+x+'" y="'+(H-14)+'" fill="#6f8a6f" font-size="12" font-family="monospace" text-anchor="middle">'+y+'</text>';}
+  [0,0.0008,0.0016].forEach(v=>{el+='<line x1="'+L+'" y1="'+Y(v)+'" x2="'+(W-R)+'" y2="'+Y(v)+'" stroke="#1c261c"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" fill="#6f8a6f" font-size="12" font-family="monospace" text-anchor="end">'+v.toFixed(4)+'</text>';});
+  el+='<line x1="'+L+'" y1="'+Y(goal)+'" x2="'+(W-R)+'" y2="'+Y(goal)+'" stroke="#f0a33e" stroke-width="2" stroke-dasharray="6 5"/><text x="'+(L+6)+'" y="'+(Y(goal)-6)+'" fill="#f0a33e" font-size="12" font-family="monospace">goal 0.00227664 = the code 227664</text>';
+  let path=pts.map((p,i)=>(i?'L':'M')+X(p.ts).toFixed(1)+','+Y(p.c).toFixed(1)).join(' ');
+  el+='<path d="'+path+'" fill="none" stroke="#3fdc5c" stroke-width="2"/>';
+  pts.forEach(p=>{el+='<circle cx="'+X(p.ts).toFixed(1)+'" cy="'+Y(p.c).toFixed(1)+'" r="3.5" fill="#0a0e0a" stroke="#3fdc5c" stroke-width="2" data-ts="'+p.ts+'" data-c="'+p.c+'"/>';});
+  svg.innerHTML=el;
+  svg.querySelectorAll('circle').forEach(c=>{
+    c.addEventListener('mouseenter',()=>{const ts=c.dataset.ts;const d=ts.slice(0,4)+'-'+ts.slice(4,6)+'-'+ts.slice(6,8);tt.innerHTML=d+'<br>counter '+(+c.dataset.c).toFixed(8)+' BTC';tt.style.opacity=1;});
+    c.addEventListener('mousemove',e=>{tt.style.left=(e.clientX+14)+'px';tt.style.top=(e.clientY-10)+'px';});
+    c.addEventListener('mouseleave',()=>tt.style.opacity=0);
+  });
+  /* qr */
+  const cv=document.getElementById('qr'),ctx=cv.getContext('2d'),g=D.qr,n=g.length,m=g[0].length,S=18,ox=10,oy=10;
+  function draw(hr,hc){ctx.fillStyle='#fff';ctx.fillRect(0,0,cv.width,cv.height);
+    for(let r=0;r<n;r++)for(let c=0;c<m;c++){ctx.fillStyle=g[r][c]?'#111':'#fff';ctx.fillRect(ox+c*S,oy+r*S,S-1,S-1);
+      const fn=(r<9&&c<9)||r===6||c===6;if(fn){ctx.fillStyle='rgba(63,220,92,.18)';ctx.fillRect(ox+c*S,oy+r*S,S-1,S-1);} }
+    if(hr>=0){ctx.strokeStyle='#f0a33e';ctx.lineWidth=2;ctx.strokeRect(ox+hc*S,oy+hr*S,S-1,S-1);}}
+  draw(-1,-1);
+  const info=document.getElementById('qmsg');const base=info.innerHTML;
+  cv.addEventListener('mousemove',e=>{const x=e.offsetX-ox,y=e.offsetY-oy;const c=Math.floor(x/S),r=Math.floor(y/S);
+    if(r<0||c<0||r>=n||c>=m){draw(-1,-1);return;}draw(r,c);
+    const fn=(r<9&&c<9)?'finder / format':(r===6||c===6)?'timing':'data';
+    info.innerHTML='module (row '+r+', col '+c+') = <b style="color:var(--grn)">'+(g[r][c]?'dark 1':'light 0')+'</b> — '+fn;});
+  cv.addEventListener('mouseleave',()=>{draw(-1,-1);info.innerHTML=base;});
+});
+/* key buffer */
+(function(){const b=document.getElementById('buf');
+  for(let i=0;i<13;i++){const c=document.createElement('div');c.className='cell'+(i===0?' set':i===1?' next':'');c.textContent=i===0?'D':(i===1?'?':'·');b.appendChild(c);}})();
+</script>
+</body></html>
